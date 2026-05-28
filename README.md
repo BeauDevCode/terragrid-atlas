@@ -18,6 +18,7 @@ I built TerraGrid Atlas because energy infrastructure data is often fragmented, 
 - Layer toggles for power plants, transmission lines, substations, data centers, grid regions, price nodes, interconnections, alerts, and country statistics
 - Search and filters for country, continent, fuel type, capacity range, voltage class, infrastructure type, status, operator, year, and data mode
 - Clustered infrastructure points, hover tooltips, click popups, country zooming, and density mode
+- Clearly labeled sample density layer that adds visual demo infrastructure signals without claiming verified live coverage
 - Collapsible intelligence dashboard with global and selected-country metrics
 - Country dashboards with generation mix, fuel capacity, infrastructure counts, load history, alerts, operators, and map preview
 - Infrastructure explorer with sorting, filtering, pagination, row detail drawer, and CSV export
@@ -117,6 +118,8 @@ This repository ships with realistic sample and estimated records for:
 - Saudi Arabia
 
 Records are labeled as `sample`, `estimated`, or `live`. The current MVP intentionally runs without a required database or paid API service.
+
+The global atlas also includes a clearly labeled sample density layer. Those additional visual density points and corridors are generated presentation/demo signals used to make the atlas readable at global zoom. They are not verified live infrastructure assets.
 
 ## Screenshots
 

@@ -3,7 +3,7 @@
 ## Captured Screenshots
 
 - `screenshots/landing.png` - Landing page and main project positioning
-- `screenshots/atlas.png` - Primary atlas dashboard and best first showcase image
+- `screenshots/atlas.png` - Primary atlas dashboard and best first showcase image; includes a clearly labeled sample density layer
 - `screenshots/dashboard-us.png` - Country dashboard analytics view
 - `screenshots/explorer.png` - Searchable infrastructure explorer
 - `screenshots/compare.png` - Country comparison dashboard
