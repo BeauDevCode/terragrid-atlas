@@ -31,6 +31,28 @@ type PointProperties = {
   notes: string;
 };
 
+type DemoPointProperties = PointProperties & {
+  demo: "visual-density";
+  weight: number;
+};
+
+type DemoDensityHub = {
+  code: string;
+  country: string;
+  continent: string;
+  label: string;
+  center: [number, number];
+  intensity: number;
+};
+
+type DemoCorridor = {
+  id: string;
+  name: string;
+  from: string;
+  to: string;
+  type: "domestic" | "interconnection";
+};
+
 type SelectedFeature = PointProperties & {
   longitude: number;
   latitude: number;
@@ -155,6 +177,64 @@ const regionLabels: Array<{ label: string; coordinates: [number, number] }> = [
   { label: "Australia", coordinates: [134, -27] }
 ];
 
+const demoDensityHubs: DemoDensityHub[] = [
+  { code: "US", country: "United States", continent: "North America", label: "PJM / Mid-Atlantic", center: [-77.5, 39.6], intensity: 12 },
+  { code: "US", country: "United States", continent: "North America", label: "ERCOT / Texas", center: [-97.3, 31.2], intensity: 11 },
+  { code: "US", country: "United States", continent: "North America", label: "WECC / California", center: [-120.2, 37.1], intensity: 10 },
+  { code: "CA", country: "Canada", continent: "North America", label: "Ontario-Quebec", center: [-75.7, 45.6], intensity: 8 },
+  { code: "MX", country: "Mexico", continent: "North America", label: "Mexico Central", center: [-99.2, 20.6], intensity: 7 },
+  { code: "BR", country: "Brazil", continent: "South America", label: "Southeast Brazil", center: [-46.8, -22.9], intensity: 10 },
+  { code: "GB", country: "United Kingdom", continent: "Europe", label: "GB National Grid", center: [-1.5, 52.7], intensity: 8 },
+  { code: "FR", country: "France", continent: "Europe", label: "France RTE", center: [2.4, 47.2], intensity: 8 },
+  { code: "DE", country: "Germany", continent: "Europe", label: "Germany TSOs", center: [10.3, 51.1], intensity: 11 },
+  { code: "NL", country: "Netherlands", continent: "Europe", label: "Dutch grid hub", center: [5.2, 52.1], intensity: 7 },
+  { code: "ES", country: "Spain", continent: "Europe", label: "Iberian grid", center: [-3.7, 40.3], intensity: 7 },
+  { code: "IT", country: "Italy", continent: "Europe", label: "Italian north-south", center: [12.4, 43.2], intensity: 7 },
+  { code: "NO", country: "Norway", continent: "Europe", label: "Nordic hydro", center: [9.1, 61.2], intensity: 6 },
+  { code: "SE", country: "Sweden", continent: "Europe", label: "Swedish grid", center: [15.2, 60.2], intensity: 6 },
+  { code: "PL", country: "Poland", continent: "Europe", label: "Poland balancing area", center: [19.1, 52.0], intensity: 7 },
+  { code: "SA", country: "Saudi Arabia", continent: "Asia", label: "Saudi central grid", center: [45.3, 24.0], intensity: 7 },
+  { code: "AE", country: "United Arab Emirates", continent: "Asia", label: "Gulf compute corridor", center: [54.4, 24.4], intensity: 6 },
+  { code: "IN", country: "India", continent: "Asia", label: "India national grid", center: [78.8, 22.8], intensity: 12 },
+  { code: "CN", country: "China", continent: "Asia", label: "East China grid", center: [116.4, 35.6], intensity: 13 },
+  { code: "JP", country: "Japan", continent: "Asia", label: "Japan interconnection", center: [139.3, 36.3], intensity: 8 },
+  { code: "KR", country: "South Korea", continent: "Asia", label: "Korea grid", center: [127.8, 36.2], intensity: 7 },
+  { code: "AU", country: "Australia", continent: "Oceania", label: "NEM corridor", center: [148.2, -33.2], intensity: 9 },
+  { code: "ZA", country: "South Africa", continent: "Africa", label: "South African grid", center: [27.9, -28.8], intensity: 8 },
+  { code: "NG", country: "Nigeria", continent: "Africa", label: "Nigeria grid", center: [7.9, 9.2], intensity: 7 },
+  { code: "EG", country: "Egypt", continent: "Africa", label: "Egypt grid", center: [30.6, 27.2], intensity: 6 }
+];
+
+const demoCorridors: DemoCorridor[] = [
+  { id: "demo-us-east-canada", name: "Northeast intertie visual corridor", from: "US", to: "CA", type: "interconnection" },
+  { id: "demo-us-mexico", name: "US-Mexico border grid visual corridor", from: "US", to: "MX", type: "interconnection" },
+  { id: "demo-uk-fr", name: "Channel interconnection visual corridor", from: "GB", to: "FR", type: "interconnection" },
+  { id: "demo-fr-de", name: "Continental Europe visual corridor", from: "FR", to: "DE", type: "interconnection" },
+  { id: "demo-de-nl", name: "North Sea market visual corridor", from: "DE", to: "NL", type: "interconnection" },
+  { id: "demo-de-pl", name: "Central Europe grid visual corridor", from: "DE", to: "PL", type: "interconnection" },
+  { id: "demo-no-se", name: "Nordic hydro visual corridor", from: "NO", to: "SE", type: "interconnection" },
+  { id: "demo-sa-ae", name: "Gulf grid visual corridor", from: "SA", to: "AE", type: "interconnection" },
+  { id: "demo-in-cn", name: "Asian load center visual corridor", from: "IN", to: "CN", type: "interconnection" },
+  { id: "demo-cn-kr-jp", name: "Northeast Asia visual corridor", from: "CN", to: "JP", type: "interconnection" },
+  { id: "demo-ng-eg", name: "Africa north-south visual corridor", from: "NG", to: "EG", type: "interconnection" },
+  { id: "demo-za-ng", name: "Sub-Saharan grid visual corridor", from: "ZA", to: "NG", type: "interconnection" },
+  { id: "demo-br-south", name: "Brazilian hydro-load visual corridor", from: "BR", to: "BR", type: "domestic" },
+  { id: "demo-au-nem", name: "Australian NEM visual corridor", from: "AU", to: "AU", type: "domestic" }
+];
+
+const demoCategoryCycle: InfrastructureType[] = [
+  "power-plant",
+  "substation",
+  "data-center",
+  "power-plant",
+  "substation",
+  "price-node",
+  "grid-region",
+  "power-plant",
+  "data-center",
+  "alert"
+];
+
 export function WorldMap({
   dataset,
   filters,
@@ -221,13 +301,23 @@ export function WorldMap({
         data: sources.regions
       });
 
+      map.addSource("atlas-demo-points", {
+        type: "geojson",
+        data: sources.demoPoints
+      });
+
+      map.addSource("atlas-demo-lines", {
+        type: "geojson",
+        data: sources.demoLines
+      });
+
       map.addLayer({
         id: "atlas-region-fill",
         type: "fill",
         source: "atlas-regions",
         paint: {
           "fill-color": "#0ea5e9",
-          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.11, 0.035]
+          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.065, 0.014]
         }
       });
 
@@ -237,8 +327,21 @@ export function WorldMap({
         source: "atlas-regions",
         paint: {
           "line-color": "#38bdf8",
-          "line-opacity": 0.34,
-          "line-width": 1.2
+          "line-opacity": 0.24,
+          "line-width": 0.8
+        }
+      });
+
+      map.addLayer({
+        id: "atlas-demo-lines",
+        type: "line",
+        source: "atlas-demo-lines",
+        layout: { visibility: densityMode ? "visible" : "none" },
+        paint: {
+          "line-color": ["case", ["==", ["get", "corridorType"], "interconnection"], "#22d3ee", "#34d399"],
+          "line-opacity": ["interpolate", ["linear"], ["zoom"], 1, 0.34, 5, 0.54],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.7, 5, 1.4, 9, 2.4],
+          "line-blur": 0.45
         }
       });
 
@@ -253,8 +356,35 @@ export function WorldMap({
             infrastructureColors.interconnection,
             infrastructureColors["transmission-line"]
           ],
-          "line-opacity": 0.78,
-          "line-width": ["interpolate", ["linear"], ["zoom"], 1, 1, 5, 2.6, 9, 5]
+          "line-opacity": 0.68,
+          "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.7, 5, 1.8, 9, 3.2]
+        }
+      });
+
+      map.addLayer({
+        id: "atlas-demo-heat",
+        type: "heatmap",
+        source: "atlas-demo-points",
+        maxzoom: 7,
+        layout: { visibility: densityMode ? "visible" : "none" },
+        paint: {
+          "heatmap-weight": ["interpolate", ["linear"], ["get", "weight"], 0, 0, 10, 1],
+          "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 1, 0.45, 7, 1.5],
+          "heatmap-color": [
+            "interpolate",
+            ["linear"],
+            ["heatmap-density"],
+            0,
+            "rgba(2, 6, 23, 0)",
+            0.3,
+            "rgba(34, 211, 238, 0.22)",
+            0.62,
+            "rgba(52, 211, 153, 0.38)",
+            0.9,
+            "rgba(245, 158, 11, 0.48)"
+          ],
+          "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 1, 18, 7, 28],
+          "heatmap-opacity": 0.52
         }
       });
 
@@ -282,6 +412,61 @@ export function WorldMap({
           ],
           "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 1, 22, 8, 36],
           "heatmap-opacity": 0.74
+        }
+      });
+
+      map.addLayer({
+        id: "atlas-demo-point-glow",
+        type: "circle",
+        source: "atlas-demo-points",
+        layout: { visibility: densityMode ? "visible" : "none" },
+        paint: {
+          "circle-color": [
+            "match",
+            ["get", "category"],
+            "power-plant",
+            infrastructureColors["power-plant"],
+            "substation",
+            infrastructureColors.substation,
+            "data-center",
+            infrastructureColors["data-center"],
+            "price-node",
+            infrastructureColors["price-node"],
+            "alert",
+            infrastructureColors.alert,
+            "#2dd4bf"
+          ],
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, 5.5, 5, 8.5, 9, 13],
+          "circle-opacity": 0.18,
+          "circle-blur": 0.58
+        }
+      });
+
+      map.addLayer({
+        id: "atlas-demo-points",
+        type: "circle",
+        source: "atlas-demo-points",
+        layout: { visibility: densityMode ? "visible" : "none" },
+        paint: {
+          "circle-color": [
+            "match",
+            ["get", "category"],
+            "power-plant",
+            infrastructureColors["power-plant"],
+            "substation",
+            infrastructureColors.substation,
+            "data-center",
+            infrastructureColors["data-center"],
+            "price-node",
+            infrastructureColors["price-node"],
+            "alert",
+            infrastructureColors.alert,
+            "#2dd4bf"
+          ],
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, 2.4, 5, 4, 9, 6],
+          "circle-stroke-color": "#020617",
+          "circle-stroke-width": 0.7,
+          "circle-opacity": 0.82
         }
       });
 
@@ -337,7 +522,7 @@ export function WorldMap({
           "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, 4.5, 5, 7, 9, 10],
           "circle-stroke-color": "#061019",
           "circle-stroke-width": 1.5,
-          "circle-opacity": densityMode ? 0.42 : 0.95
+          "circle-opacity": densityMode ? 0.72 : 0.95
         }
       });
 
@@ -423,7 +608,7 @@ export function WorldMap({
         }
       });
 
-      const interactiveLayers = ["atlas-points", "atlas-clusters", "atlas-lines", "atlas-region-fill"];
+      const interactiveLayers = ["atlas-points", "atlas-demo-points", "atlas-clusters", "atlas-lines", "atlas-region-fill"];
       interactiveLayers.forEach((layerId) => {
         map.on("mouseenter", layerId, () => {
           map.getCanvas().style.cursor = "pointer";
@@ -443,6 +628,18 @@ export function WorldMap({
           .setHTML(`<div style="padding:10px 12px;font-size:12px"><strong>${feature.properties?.name}</strong><br/>${feature.properties?.metric}</div>`)
           .addTo(map);
       });
+
+      map.on("mousemove", "atlas-demo-points", (event) => {
+        const feature = event.features?.[0];
+        const coordinates = (feature?.geometry as GeoJSON.Point | undefined)?.coordinates as [number, number] | undefined;
+        if (!feature || !coordinates) return;
+        popupRef.current
+          ?.setLngLat(coordinates)
+          .setHTML(
+            `<div style="padding:10px 12px;font-size:12px"><strong>${feature.properties?.name}</strong><br/>${feature.properties?.metric}<br/><span style="color:#fcd34d">Visual demo density point</span></div>`
+          )
+          .addTo(map);
+      });
     });
 
     return () => {
@@ -450,7 +647,7 @@ export function WorldMap({
       map.remove();
       mapRef.current = null;
     };
-  }, [densityMode, onSelectCountry, sources.lines, sources.points, sources.regions]);
+  }, [densityMode, onSelectCountry, sources.demoLines, sources.demoPoints, sources.lines, sources.points, sources.regions]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -458,13 +655,20 @@ export function WorldMap({
     (map.getSource("atlas-points") as GeoJSONSource | undefined)?.setData(sources.points);
     (map.getSource("atlas-lines") as GeoJSONSource | undefined)?.setData(sources.lines);
     (map.getSource("atlas-regions") as GeoJSONSource | undefined)?.setData(sources.regions);
+    (map.getSource("atlas-demo-points") as GeoJSONSource | undefined)?.setData(sources.demoPoints);
+    (map.getSource("atlas-demo-lines") as GeoJSONSource | undefined)?.setData(sources.demoLines);
   }, [sources]);
 
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !map.isStyleLoaded() || !map.getLayer("atlas-density")) return;
     map.setLayoutProperty("atlas-density", "visibility", densityMode ? "visible" : "none");
-    map.setPaintProperty("atlas-points", "circle-opacity", densityMode ? 0.42 : 0.95);
+    ["atlas-demo-heat", "atlas-demo-lines", "atlas-demo-point-glow", "atlas-demo-points"].forEach((layerId) => {
+      if (map.getLayer(layerId)) {
+        map.setLayoutProperty(layerId, "visibility", densityMode ? "visible" : "none");
+      }
+    });
+    map.setPaintProperty("atlas-points", "circle-opacity", densityMode ? 0.72 : 0.95);
   }, [densityMode]);
 
   useEffect(() => {
@@ -496,7 +700,7 @@ export function WorldMap({
     >
       <div ref={containerRef} className="absolute inset-0" />
       {!compact ? <StaticWorldContextOverlay dataset={dataset} sources={sources} /> : null}
-      {!compact ? <StaticAtlasOverlay sources={sources} /> : null}
+      {!compact ? <StaticAtlasOverlay sources={sources} densityMode={densityMode} /> : null}
       {!compact && showAttributionNote ? <div className="pointer-events-none absolute bottom-4 left-4 z-10 max-w-sm rounded-md border border-slate-700/70 bg-slate-950/74 px-3 py-2 text-xs text-slate-400 backdrop-blur">
         Basemap: CARTO dark matter. Infrastructure layers are sample or estimated records.
       </div> : null}
@@ -739,6 +943,8 @@ function buildMapSources(dataset: AtlasDataset, filters: AtlasFilters, layers: L
           }))
       : [];
 
+  const { demoPoints, demoLines } = buildDemoDensitySources(filters, layers);
+
   return {
     points: {
       type: "FeatureCollection",
@@ -751,7 +957,85 @@ function buildMapSources(dataset: AtlasDataset, filters: AtlasFilters, layers: L
     regions: {
       type: "FeatureCollection",
       features: regionFeatures
-    } satisfies GeoJSON.FeatureCollection<GeoJSON.Polygon>
+    } satisfies GeoJSON.FeatureCollection<GeoJSON.Polygon>,
+    demoPoints,
+    demoLines
+  };
+}
+
+function buildDemoDensitySources(filters: AtlasFilters, layers: LayerState) {
+  const demoPoints: GeoJSON.Feature<GeoJSON.Point, DemoPointProperties>[] = [];
+
+  demoDensityHubs.forEach((hub, hubIndex) => {
+    if (!matchesDemoHub(hub, filters)) return;
+
+    const count = Math.max(5, hub.intensity);
+    for (let index = 0; index < count; index += 1) {
+      const category = demoCategoryCycle[(index + hubIndex) % demoCategoryCycle.length];
+      if (!isDemoCategoryVisible(category, layers, filters)) continue;
+
+      const [longitude, latitude] = demoCoordinate(hub.center, index, hubIndex);
+      demoPoints.push({
+        type: "Feature",
+        geometry: { type: "Point", coordinates: [longitude, latitude] },
+        properties: {
+          id: `demo-${hub.code.toLowerCase()}-${index}`,
+          name: `${demoCategoryLabel(category)} sample - ${hub.label}`,
+          category,
+          countryCode: hub.code,
+          country: hub.country,
+          operator: "TerraGrid demo density layer",
+          metric: "Visual sample infrastructure density",
+          status: "sample",
+          mode: "sample",
+          notes: "Generated visual demo point for map density only; not a verified live infrastructure record.",
+          demo: "visual-density",
+          weight: Math.min(10, Math.max(2, hub.intensity / 1.4))
+        }
+      });
+    }
+  });
+
+  const demoLines: GeoJSON.Feature<GeoJSON.LineString>[] = [];
+  if (layers.transmissionLines && matchesInfrastructureType(filters, "transmission-line") && filters.dataMode !== "live") {
+    demoCorridors
+      .filter((corridor) => (corridor.type === "interconnection" ? layers.interconnections : true))
+      .filter((corridor) => matchesDemoCorridor(corridor, filters))
+      .forEach((corridor) => {
+        const from = demoDensityHubs.find((hub) => hub.code === corridor.from);
+        const to = demoDensityHubs.find((hub) => hub.code === corridor.to && (corridor.to !== corridor.from || hub.label !== from?.label));
+        if (!from) return;
+        const end = to ?? { ...from, center: offsetDomesticCorridor(from.center) };
+        const coordinates = buildArcCoordinates(from.center, end.center);
+        demoLines.push({
+          type: "Feature",
+          geometry: { type: "LineString", coordinates },
+          properties: {
+            id: corridor.id,
+            name: corridor.name,
+            countryCode: from.code,
+            country: corridor.from === corridor.to ? from.country : `${from.country} / ${end.country}`,
+            operator: "TerraGrid demo density layer",
+            voltageKV: "visual",
+            lengthKm: "sample",
+            status: "sample",
+            corridorType: corridor.type,
+            mode: "sample",
+            notes: "Generated visual demo transmission corridor for density and presentation context."
+          }
+        });
+      });
+  }
+
+  return {
+    demoPoints: {
+      type: "FeatureCollection",
+      features: demoPoints
+    } satisfies GeoJSON.FeatureCollection<GeoJSON.Point>,
+    demoLines: {
+      type: "FeatureCollection",
+      features: demoLines
+    } satisfies GeoJSON.FeatureCollection<GeoJSON.LineString>
   };
 }
 
@@ -808,6 +1092,68 @@ function matchesVoltage(voltageKV: number, voltageClass?: string) {
   if (voltageClass === "400") return voltageKV >= 380 && voltageKV < 700;
   if (voltageClass === "700") return voltageKV >= 700;
   return true;
+}
+
+function matchesDemoHub(hub: DemoDensityHub, filters: AtlasFilters) {
+  if (filters.dataMode === "live") return false;
+  if (filters.countryCode && hub.code !== filters.countryCode) return false;
+  if (filters.continent && hub.continent !== filters.continent) return false;
+  if (filters.status && filters.status !== "all" && filters.status !== "operating") return false;
+  return matchesQuery(filters.query, [hub.country, hub.label, hub.code]);
+}
+
+function matchesDemoCorridor(corridor: DemoCorridor, filters: AtlasFilters) {
+  if (filters.countryCode && corridor.from !== filters.countryCode && corridor.to !== filters.countryCode) return false;
+  const from = demoDensityHubs.find((hub) => hub.code === corridor.from);
+  const to = demoDensityHubs.find((hub) => hub.code === corridor.to);
+  if (!from) return false;
+  if (filters.continent && from.continent !== filters.continent && to?.continent !== filters.continent) return false;
+  return matchesQuery(filters.query, [corridor.name, from.country, to?.country]);
+}
+
+function isDemoCategoryVisible(category: InfrastructureType, layers: LayerState, filters: AtlasFilters) {
+  if (!matchesInfrastructureType(filters, category)) return false;
+  const layerByCategory: Partial<Record<InfrastructureType, AtlasLayerKey>> = {
+    "power-plant": "powerPlants",
+    substation: "substations",
+    "data-center": "dataCenters",
+    "price-node": "priceNodes",
+    "grid-region": "countryStats",
+    alert: "alerts"
+  };
+  const layerId = layerByCategory[category];
+  return layerId ? layers[layerId] : true;
+}
+
+type AtlasLayerKey = keyof LayerState;
+
+function demoCoordinate([longitude, latitude]: [number, number], index: number, hubIndex: number): [number, number] {
+  const angle = (index * 137.5 + hubIndex * 31) * (Math.PI / 180);
+  const ring = 0.45 + (index % 4) * 0.34 + Math.floor(index / 6) * 0.18;
+  const longitudeScale = latitude > 50 ? 1.35 : latitude < -25 ? 1.2 : 1;
+  return [
+    Math.round((longitude + Math.cos(angle) * ring * longitudeScale) * 1000) / 1000,
+    Math.round((latitude + Math.sin(angle) * ring * 0.72) * 1000) / 1000
+  ];
+}
+
+function offsetDomesticCorridor([longitude, latitude]: [number, number]): [number, number] {
+  return [longitude + 5.8, latitude + (latitude > 0 ? -3.6 : 3.6)];
+}
+
+function buildArcCoordinates(from: [number, number], to: [number, number]): [number, number][] {
+  const [fromLon, fromLat] = from;
+  const [toLon, toLat] = to;
+  const midLon = (fromLon + toLon) / 2;
+  const midLat = (fromLat + toLat) / 2 + Math.min(9, Math.max(-9, Math.abs(toLon - fromLon) / 18));
+  return [from, [midLon, midLat], to];
+}
+
+function demoCategoryLabel(category: InfrastructureType) {
+  return category
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }
 
 function normalizeProperties(feature: MapGeoJSONFeature): PointProperties {
@@ -871,11 +1217,11 @@ function StaticWorldContextOverlay({
         <polygon
           key={continent.name}
           points={continent.coordinates.map((coordinate) => projectToViewport(coordinate)).join(" ")}
-          fill="url(#atlas-land-gradient)"
+          fill="none"
           filter="url(#atlas-land-glow)"
           stroke="#5eead4"
-          strokeOpacity="0.22"
-          strokeWidth="0.18"
+          strokeOpacity="0.055"
+          strokeWidth="0.12"
           vectorEffect="non-scaling-stroke"
         />
       ))}
@@ -946,9 +1292,11 @@ function StaticWorldContextOverlay({
 }
 
 function StaticAtlasOverlay({
-  sources
+  sources,
+  densityMode
 }: {
   sources: ReturnType<typeof buildMapSources>;
+  densityMode: boolean;
 }) {
   return (
     <svg className="pointer-events-none absolute inset-0 z-[2] h-full w-full opacity-90" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
@@ -961,6 +1309,34 @@ function StaticAtlasOverlay({
           </feMerge>
         </filter>
       </defs>
+      {densityMode
+        ? sources.demoLines.features.map((feature) => {
+            const points = feature.geometry.coordinates
+              .map((coordinate) => projectToViewport([coordinate[0] ?? 0, coordinate[1] ?? 0]))
+              .join(" ");
+            const color = feature.properties?.corridorType === "interconnection" ? "#22d3ee" : "#34d399";
+            return (
+              <g key={String(feature.properties?.id)}>
+                <polyline
+                  points={points}
+                  fill="none"
+                  stroke={color}
+                  strokeOpacity="0.14"
+                  strokeWidth="1.1"
+                  vectorEffect="non-scaling-stroke"
+                />
+                <polyline
+                  points={points}
+                  fill="none"
+                  stroke={color}
+                  strokeOpacity="0.42"
+                  strokeWidth="0.22"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </g>
+            );
+          })
+        : null}
       {sources.lines.features.map((feature) => {
         const points = feature.geometry.coordinates
           .map((coordinate) => projectToViewport([coordinate[0] ?? 0, coordinate[1] ?? 0]))
@@ -981,20 +1357,101 @@ function StaticAtlasOverlay({
           />
         );
       })}
+      {densityMode
+        ? sources.demoPoints.features.map((feature) => {
+            const [x, y] = projectToViewport([feature.geometry.coordinates[0] ?? 0, feature.geometry.coordinates[1] ?? 0]);
+            const category = feature.properties?.category ?? "power-plant";
+            const color = infrastructureColors[category] ?? "#22d3ee";
+            return <DemoMarker key={String(feature.properties?.id)} x={x} y={y} color={color} category={category} />;
+          })
+        : null}
       {sources.points.features.map((feature) => {
         const [x, y] = projectToViewport([feature.geometry.coordinates[0] ?? 0, feature.geometry.coordinates[1] ?? 0]);
         const category = feature.properties?.category ?? "power-plant";
         const color = infrastructureColors[category] ?? "#22d3ee";
-        const radius = category === "grid-region" ? 0.42 : category === "alert" ? 0.38 : category === "data-center" ? 0.34 : 0.3;
-        return (
-          <g key={String(feature.properties?.id)} filter="url(#atlas-glow)">
-            <circle cx={x} cy={y} r={radius * 2.4} fill={color} fillOpacity="0.12" />
-            <circle cx={x} cy={y} r={radius * 1.45} fill={color} fillOpacity="0.24" />
-            <circle cx={x} cy={y} r={radius} fill={color} fillOpacity="0.95" />
-          </g>
-        );
+        return <DemoMarker key={String(feature.properties?.id)} x={x} y={y} color={color} category={category} emphasis />;
       })}
     </svg>
+  );
+}
+
+function DemoMarker({
+  x,
+  y,
+  color,
+  category,
+  emphasis = false
+}: {
+  x: number;
+  y: number;
+  color: string;
+  category: InfrastructureType;
+  emphasis?: boolean;
+}) {
+  const radius = emphasis ? 0.36 : 0.22;
+  const glow = emphasis ? 3.4 : 2.4;
+  if (category === "substation") {
+    return (
+      <g filter="url(#atlas-glow)">
+        <circle cx={x} cy={y} r={radius * glow} fill={color} fillOpacity="0.12" />
+        <rect
+          x={x - radius}
+          y={y - radius}
+          width={radius * 2}
+          height={radius * 2}
+          fill={color}
+          fillOpacity={emphasis ? "0.95" : "0.78"}
+          stroke="#020617"
+          strokeWidth="0.05"
+          transform={`rotate(45 ${x} ${y})`}
+          vectorEffect="non-scaling-stroke"
+        />
+      </g>
+    );
+  }
+
+  if (category === "data-center") {
+    return (
+      <g filter="url(#atlas-glow)">
+        <circle cx={x} cy={y} r={radius * glow} fill={color} fillOpacity="0.12" />
+        <rect
+          x={x - radius * 1.05}
+          y={y - radius * 0.8}
+          width={radius * 2.1}
+          height={radius * 1.6}
+          rx="0.08"
+          fill={color}
+          fillOpacity={emphasis ? "0.95" : "0.78"}
+          stroke="#020617"
+          strokeWidth="0.05"
+          vectorEffect="non-scaling-stroke"
+        />
+      </g>
+    );
+  }
+
+  if (category === "alert") {
+    return (
+      <g filter="url(#atlas-glow)">
+        <circle cx={x} cy={y} r={radius * glow} fill={color} fillOpacity="0.14" />
+        <path
+          d={`M ${x} ${y - radius * 1.3} L ${x + radius * 1.25} ${y + radius} L ${x - radius * 1.25} ${y + radius} Z`}
+          fill={color}
+          fillOpacity={emphasis ? "0.95" : "0.8"}
+          stroke="#020617"
+          strokeWidth="0.05"
+          vectorEffect="non-scaling-stroke"
+        />
+      </g>
+    );
+  }
+
+  return (
+    <g filter="url(#atlas-glow)">
+      <circle cx={x} cy={y} r={radius * glow} fill={color} fillOpacity="0.12" />
+      <circle cx={x} cy={y} r={radius * 1.55} fill={color} fillOpacity="0.22" />
+      <circle cx={x} cy={y} r={radius} fill={color} fillOpacity={emphasis ? "0.95" : "0.82"} />
+    </g>
   );
 }
 

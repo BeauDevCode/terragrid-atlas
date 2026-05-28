@@ -26,9 +26,9 @@ export function MapLayerControls({
   onDensityModeChange: (value: boolean) => void;
 }) {
   return (
-    <div className="rounded-lg border border-cyan-300/15 bg-slate-950/55 p-3 shadow-panel">
-      <div className="mb-3 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+    <div className="rounded-lg border border-cyan-300/15 bg-slate-950/60 p-2.5 shadow-panel">
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-300">
           <Layers className="h-4 w-4 text-cyan-200" />
           Layer stack
         </div>
@@ -43,14 +43,17 @@ export function MapLayerControls({
           Density
         </Button>
       </div>
-      <div className="grid gap-2">
+      <p className="mb-2 text-[10px] leading-4 text-slate-500">
+        {densityMode ? "Demo density layer active: visual sample infrastructure markers." : "Density layer hidden; verified sample records remain visible."}
+      </p>
+      <div className="grid gap-1.5">
         {layerLabels.map((layer) => (
           <label
             key={layer.id}
             className={cn(
-              "group flex cursor-pointer items-center justify-between gap-3 rounded-md border px-3 py-2 text-sm transition",
+              "group flex cursor-pointer items-center justify-between gap-2 rounded-md border px-2.5 py-1.5 text-xs transition",
               layers[layer.id]
-                ? "border-cyan-300/35 bg-cyan-300/[0.08] text-slate-50 shadow-[0_0_18px_rgba(34,211,238,0.08)]"
+                ? "border-cyan-300/35 bg-cyan-300/[0.09] text-slate-50 shadow-[0_0_18px_rgba(34,211,238,0.08)]"
                 : "border-slate-800 bg-slate-950/50 text-slate-500 hover:border-slate-600 hover:text-slate-300"
             )}
           >
@@ -63,7 +66,7 @@ export function MapLayerControls({
             </span>
             <input
               checked={layers[layer.id]}
-              className="h-4 w-4 accent-cyan-300"
+              className="h-3.5 w-3.5 accent-cyan-300"
               type="checkbox"
               onChange={() => onToggle(layer.id)}
             />

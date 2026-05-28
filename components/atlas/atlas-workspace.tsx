@@ -109,35 +109,35 @@ export function AtlasWorkspace({ dataset }: { dataset: AtlasDataset }) {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden overflow-y-auto bg-[#03080d] text-slate-100 lg:h-screen lg:overflow-hidden">
-      <div className="absolute inset-0 bg-atlas-grid atlas-grid opacity-[0.08]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_62%_28%,rgba(34,211,238,0.12),transparent_30%),radial-gradient(circle_at_80%_70%,rgba(16,185,129,0.08),transparent_28%)]" />
+      <div className="absolute inset-0 bg-atlas-grid atlas-grid opacity-[0.045]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_20%,rgba(34,211,238,0.08),transparent_26%),radial-gradient(circle_at_82%_70%,rgba(16,185,129,0.05),transparent_24%)]" />
 
-      <div className="relative z-10 grid min-h-screen min-w-0 lg:h-full lg:min-h-0 lg:grid-cols-[318px_1fr]">
-        <aside className="atlas-scrollbar z-30 flex max-h-[58vh] min-h-0 min-w-0 flex-col overflow-y-auto border-r border-cyan-300/15 bg-slate-950/86 shadow-[20px_0_80px_rgba(0,0,0,0.42)] backdrop-blur-xl lg:max-h-none">
-          <div className="border-b border-slate-800/90 p-5">
+      <div className="relative z-10 grid min-h-screen min-w-0 lg:h-full lg:min-h-0 lg:grid-cols-[286px_1fr]">
+        <aside className="atlas-scrollbar z-30 flex max-h-[58vh] min-h-0 min-w-0 flex-col overflow-y-auto border-r border-cyan-300/14 bg-[#020617]/88 shadow-[16px_0_64px_rgba(0,0,0,0.45)] backdrop-blur-xl lg:max-h-none">
+          <div className="border-b border-slate-800/85 p-4">
             <Link href="/" className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-cyan-300/35 bg-cyan-300/10 text-cyan-200 shadow-glow">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-300/35 bg-cyan-300/10 text-cyan-200 shadow-glow">
                 <Globe2 className="h-5 w-5" />
               </span>
               <span>
-                <span className="block text-base font-semibold tracking-wide text-slate-50">TerraGrid Atlas</span>
+                <span className="block text-sm font-semibold tracking-wide text-slate-50">TerraGrid Atlas</span>
                 <span className="block text-xs text-cyan-100/70">Global Grid Intelligence</span>
               </span>
             </Link>
 
-            <div className="mt-5 grid grid-cols-2 gap-2">
+            <div className="mt-4 grid grid-cols-2 gap-2">
               <LivePill label="System" value="Live-ready" tone="green" />
               <LivePill label="Mode" value="Demo data" tone="cyan" />
             </div>
           </div>
 
-          <nav className="grid gap-1 border-b border-slate-800/90 p-3">
+          <nav className="grid gap-1 border-b border-slate-800/90 p-2.5">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 rounded-md border px-3 py-2.5 text-sm transition",
+                  "flex items-center gap-2.5 rounded-md border px-2.5 py-2 text-xs transition",
                   item.href === "/atlas"
                     ? "border-cyan-300/30 bg-cyan-300/10 text-cyan-50"
                     : "border-transparent text-slate-400 hover:border-slate-700 hover:bg-white/5 hover:text-slate-100"
@@ -149,16 +149,16 @@ export function AtlasWorkspace({ dataset }: { dataset: AtlasDataset }) {
             ))}
           </nav>
 
-          <div className="atlas-scrollbar min-h-0 flex-1 space-y-4 overflow-y-auto p-4">
-            <div className="rounded-lg border border-emerald-300/20 bg-emerald-300/[0.07] p-4">
+          <div className="atlas-scrollbar min-h-0 flex-1 space-y-3 overflow-y-auto p-3">
+            <div className="rounded-lg border border-emerald-300/20 bg-emerald-300/[0.065] p-3">
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-emerald-100/60">Current scope</p>
-                  <h2 className="mt-1 truncate text-lg font-semibold text-slate-50">{scopeName}</h2>
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-emerald-100/60">Current scope</p>
+                  <h2 className="mt-1 truncate text-base font-semibold text-slate-50">{scopeName}</h2>
                 </div>
-                <ShieldCheck className="h-5 w-5 text-emerald-200" />
+                <ShieldCheck className="h-4 w-4 text-emerald-200" />
               </div>
-              <div className="mt-4 grid grid-cols-2 gap-2">
+              <div className="mt-3 grid grid-cols-2 gap-2">
                 <SidebarMetric label="Capacity" value={formatCapacity(selectedStat?.installedCapacityMW ?? overview.installedCapacityMW)} />
                 <SidebarMetric label="Plants" value={String(selectedBundle?.powerPlants.length ?? overview.powerPlantCount)} />
                 <SidebarMetric label="Substations" value={String(selectedBundle?.substations.length ?? overview.substationCount)} />
@@ -166,7 +166,7 @@ export function AtlasWorkspace({ dataset }: { dataset: AtlasDataset }) {
               </div>
             </div>
 
-            <div className="rounded-lg border border-slate-700/70 bg-slate-950/55 p-3">
+            <div className="rounded-lg border border-slate-700/70 bg-slate-950/55 p-2.5">
               <div className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-slate-500">
                 <Search className="h-3.5 w-3.5 text-cyan-200" />
                 Global search
@@ -174,9 +174,9 @@ export function AtlasWorkspace({ dataset }: { dataset: AtlasDataset }) {
               <SearchBar
                 value={filters.query ?? ""}
                 onChange={(query) => setFilters((current) => ({ ...current, query }))}
-                placeholder="Plant, country, region, operator..."
+                placeholder="Plant, country, operator..."
               />
-              <div className="mt-3 grid grid-cols-2 gap-2">
+              <div className="mt-2 grid grid-cols-2 gap-2">
                 <Button size="sm" variant="secondary" onClick={clearScope}>
                   Global
                 </Button>
@@ -207,6 +207,11 @@ export function AtlasWorkspace({ dataset }: { dataset: AtlasDataset }) {
                 </div>
               ) : null}
             </div>
+
+            <div className="rounded-lg border border-amber-300/15 bg-amber-300/[0.055] px-3 py-2 text-[11px] leading-4 text-slate-400">
+              <span className="font-medium uppercase tracking-[0.14em] text-amber-100/70">Sample density</span>
+              <p className="mt-1">Additional visual demo points show plausible global infrastructure density; records are not verified live assets.</p>
+            </div>
           </div>
         </aside>
 
@@ -221,15 +226,18 @@ export function AtlasWorkspace({ dataset }: { dataset: AtlasDataset }) {
             showAttributionNote={false}
           />
 
-          <div className="pointer-events-none absolute inset-x-3 top-3 z-20 flex flex-col gap-3 xl:inset-x-4 xl:top-4 xl:flex-row xl:items-center xl:justify-between">
-            <div className="pointer-events-auto rounded-lg border border-cyan-300/18 bg-slate-950/72 px-4 py-3 shadow-panel backdrop-blur-xl">
-              <div className="flex flex-wrap items-center gap-3">
+          <div className="pointer-events-none absolute inset-x-3 top-3 z-20 flex flex-col gap-2 xl:inset-x-4 xl:top-4 xl:flex-row xl:items-start xl:justify-between">
+            <div className="pointer-events-auto rounded-lg border border-cyan-300/16 bg-[#020617]/72 px-3 py-2 shadow-panel backdrop-blur-xl">
+              <div className="flex flex-wrap items-center gap-2.5">
                 <Badge variant="cyan">Global Atlas</Badge>
                 <span className="text-xs uppercase tracking-[0.18em] text-slate-500">Operations / World grid map</span>
+                <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.13em] text-amber-100">
+                  Sample density
+                </span>
               </div>
-              <div className="mt-1 flex flex-wrap items-end gap-x-4 gap-y-1">
-                <h1 className="break-words text-2xl font-semibold tracking-normal text-slate-50">Global infrastructure intelligence</h1>
-                <span className="pb-1 text-xs text-emerald-200">Updated {timestamp}</span>
+              <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+                <h1 className="break-words text-base font-semibold tracking-normal text-slate-50 sm:text-lg">Global Infrastructure Intelligence</h1>
+                <span className="text-xs text-emerald-200">Updated {timestamp}</span>
               </div>
             </div>
 
@@ -239,11 +247,11 @@ export function AtlasWorkspace({ dataset }: { dataset: AtlasDataset }) {
             </div>
           </div>
 
-          <div className="pointer-events-none absolute left-3 right-3 top-[132px] z-20 max-w-none lg:left-4 lg:right-auto lg:top-[118px] lg:w-[360px] lg:max-w-[calc(100vw-40px)]">
+          <div className="pointer-events-none absolute left-3 right-3 top-[112px] z-20 max-w-none lg:left-4 lg:right-auto lg:top-[94px] lg:w-[306px] lg:max-w-[calc(100vw-40px)]">
             <GenerationMixPanel data={generationMix} />
           </div>
 
-          <div className="pointer-events-none absolute left-3 right-3 top-[412px] z-20 max-w-none lg:left-auto lg:right-4 lg:top-[118px] lg:w-[370px] lg:max-w-[calc(100vw-40px)]">
+          <div className="pointer-events-none absolute left-3 right-3 top-[348px] z-20 max-w-none lg:left-auto lg:right-4 lg:top-[94px] lg:w-[316px] lg:max-w-[calc(100vw-40px)]">
             <MarketPanel
               scopeName={scopeName}
               selectedStat={selectedStat}
@@ -254,13 +262,13 @@ export function AtlasWorkspace({ dataset }: { dataset: AtlasDataset }) {
             />
           </div>
 
-          <div className="pointer-events-none absolute bottom-3 left-3 right-3 z-20 lg:bottom-5 lg:left-4 lg:right-4">
-            <div className="grid gap-3 rounded-xl border border-cyan-300/18 bg-slate-950/78 p-3 shadow-panel backdrop-blur-xl sm:grid-cols-2 xl:grid-cols-5">
-              <BottomStat icon={<Gauge className="h-4 w-4" />} label="Aggregate load" value={`${overview.realtimeLoadGW.toLocaleString()} GW`} helper="sample live metric" tone="cyan" />
-              <BottomStat icon={<Server className="h-4 w-4" />} label="Data centers" value={String(overview.dataCenterCount)} helper="mapped compute load" tone="purple" />
-              <BottomStat icon={<Zap className="h-4 w-4" />} label="Total capacity" value={formatCapacity(overview.installedCapacityMW)} helper="country totals" tone="green" />
-              <BottomStat icon={<RadioTower className="h-4 w-4" />} label="Regions" value={String(dataset.gridRegions.length)} helper="monitored zones" tone="yellow" />
-              <BottomStat icon={<AlertTriangle className="h-4 w-4" />} label="Active alerts" value={String(activeAlerts.length)} helper="grid events" tone="orange" />
+          <div className="pointer-events-none absolute bottom-3 left-3 right-3 z-20 lg:bottom-4 lg:left-4 lg:right-4">
+            <div className="grid gap-2 rounded-lg border border-cyan-300/16 bg-[#020617]/76 p-2 shadow-panel backdrop-blur-xl sm:grid-cols-2 xl:grid-cols-5">
+              <BottomStat icon={<Gauge className="h-4 w-4" />} label="Aggregate load" value={`${overview.realtimeLoadGW.toLocaleString()} GW`} tone="cyan" />
+              <BottomStat icon={<Server className="h-4 w-4" />} label="Data centers" value={String(overview.dataCenterCount)} tone="purple" />
+              <BottomStat icon={<Zap className="h-4 w-4" />} label="Total capacity" value={formatCapacity(overview.installedCapacityMW)} tone="green" />
+              <BottomStat icon={<RadioTower className="h-4 w-4" />} label="Regions" value={String(dataset.gridRegions.length)} tone="yellow" />
+              <BottomStat icon={<AlertTriangle className="h-4 w-4" />} label="Active alerts" value={String(activeAlerts.length)} tone="orange" />
             </div>
           </div>
         </section>
@@ -273,7 +281,7 @@ function LivePill({ label, value, tone }: { label: string; value: string; tone: 
   return (
     <div
       className={cn(
-        "rounded-md border px-3 py-2",
+        "rounded-md border px-2.5 py-1.5",
         tone === "green"
           ? "border-emerald-300/25 bg-emerald-300/10 text-emerald-100"
           : "border-cyan-300/25 bg-cyan-300/10 text-cyan-100"
@@ -287,24 +295,24 @@ function LivePill({ label, value, tone }: { label: string; value: string; tone: 
 
 function SidebarMetric({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-md border border-slate-700/70 bg-slate-950/55 p-3">
+    <div className="rounded-md border border-slate-700/70 bg-slate-950/55 p-2.5">
       <p className="truncate text-[10px] uppercase tracking-[0.16em] text-slate-500">{label}</p>
-      <p className="mt-1 truncate text-base font-semibold text-slate-50">{value}</p>
+      <p className="mt-0.5 truncate text-sm font-semibold text-slate-50">{value}</p>
     </div>
   );
 }
 
 function GenerationMixPanel({ data }: { data: GenerationMix[] }) {
   return (
-    <div className="rounded-xl border border-cyan-300/20 bg-slate-950/76 p-4 shadow-panel backdrop-blur-xl">
+    <div className="rounded-lg border border-cyan-300/18 bg-[#020617]/72 p-3 shadow-panel backdrop-blur-xl">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-xs uppercase tracking-[0.18em] text-cyan-100/60">Generation mix</p>
-          <h2 className="mt-1 text-lg font-semibold text-slate-50">Fuel capacity distribution</h2>
+          <p className="text-[10px] uppercase tracking-[0.18em] text-cyan-100/60">Generation mix</p>
+          <h2 className="mt-1 text-sm font-semibold text-slate-50">Fuel capacity distribution</h2>
         </div>
-        <Layers3 className="h-5 w-5 text-cyan-200" />
+        <Layers3 className="h-4 w-4 text-cyan-200" />
       </div>
-      <div className="mt-4 space-y-3">
+      <div className="mt-3 space-y-2.5">
         {data.slice(0, 6).map((fuel) => (
           <div key={fuel.fuelType}>
             <div className="mb-1 flex items-center justify-between text-xs">
@@ -338,27 +346,27 @@ function MarketPanel({
   priceNodes: number;
 }) {
   return (
-    <div className="rounded-xl border border-emerald-300/20 bg-slate-950/76 p-4 shadow-panel backdrop-blur-xl">
+    <div className="rounded-lg border border-emerald-300/18 bg-[#020617]/72 p-3 shadow-panel backdrop-blur-xl">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-xs uppercase tracking-[0.18em] text-emerald-100/60">ISO / region market</p>
-          <h2 className="mt-1 text-lg font-semibold text-slate-50">{scopeName}</h2>
+          <p className="text-[10px] uppercase tracking-[0.18em] text-emerald-100/60">ISO / region market</p>
+          <h2 className="mt-1 text-sm font-semibold text-slate-50">{scopeName}</h2>
         </div>
-        <CircleDollarSign className="h-5 w-5 text-emerald-200" />
+        <CircleDollarSign className="h-4 w-4 text-emerald-200" />
       </div>
-      <div className="mt-4 grid grid-cols-2 gap-2">
+      <div className="mt-3 grid grid-cols-2 gap-2">
         <MarketDatum label="Price" value={`$${Math.round(selectedStat?.averagePriceUsdMWh ?? overviewPrice)}/MWh`} />
         <MarketDatum label="Peak load" value={selectedStat ? `${selectedStat.demandPeakGW} GW` : "Global"} />
         <MarketDatum label="Price nodes" value={String(priceNodes)} />
         <MarketDatum label="Regions" value={String(regions)} />
       </div>
-      <div className="mt-3 rounded-md border border-yellow-300/20 bg-yellow-300/10 p-3">
+      <div className="mt-2 rounded-md border border-yellow-300/20 bg-yellow-300/10 p-2.5">
         <div className="flex items-center justify-between gap-3">
-          <span className="text-xs uppercase tracking-[0.16em] text-yellow-100/70">Alert posture</span>
-          <span className="text-sm font-semibold text-yellow-100">{alerts} active</span>
+          <span className="text-[10px] uppercase tracking-[0.16em] text-yellow-100/70">Alert posture</span>
+          <span className="text-xs font-semibold text-yellow-100">{alerts} active</span>
         </div>
-        <p className="mt-2 text-xs leading-5 text-slate-400">
-          Public live feeds are adapter-ready; current market values are transparent sample or estimated signals.
+        <p className="mt-1.5 text-[11px] leading-4 text-slate-400">
+          Adapter-ready live feeds; current market values are sample or estimated signals.
         </p>
       </div>
     </div>
@@ -367,9 +375,9 @@ function MarketPanel({
 
 function MarketDatum({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-md border border-slate-700/80 bg-slate-950/60 p-3">
+    <div className="rounded-md border border-slate-700/80 bg-slate-950/60 p-2.5">
       <p className="text-[10px] uppercase tracking-[0.16em] text-slate-500">{label}</p>
-      <p className="mt-1 text-base font-semibold text-slate-50">{value}</p>
+      <p className="mt-0.5 text-sm font-semibold text-slate-50">{value}</p>
     </div>
   );
 }
@@ -378,13 +386,11 @@ function BottomStat({
   icon,
   label,
   value,
-  helper,
   tone
 }: {
   icon: ReactNode;
   label: string;
   value: string;
-  helper: string;
   tone: "cyan" | "green" | "purple" | "yellow" | "orange";
 }) {
   const tones = {
@@ -396,12 +402,11 @@ function BottomStat({
   };
 
   return (
-    <div className="flex min-w-0 items-center gap-3 rounded-lg border border-slate-700/70 bg-slate-950/60 p-3">
-      <span className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-md border", tones[tone])}>{icon}</span>
+    <div className="flex min-w-0 items-center gap-2 rounded-md border border-slate-700/70 bg-slate-950/58 px-2.5 py-2">
+      <span className={cn("flex h-8 w-8 shrink-0 items-center justify-center rounded-md border", tones[tone])}>{icon}</span>
       <span className="min-w-0">
-        <span className="block truncate text-xs uppercase tracking-[0.16em] text-slate-500">{label}</span>
-        <span className="mt-0.5 block truncate text-lg font-semibold text-slate-50">{value}</span>
-        <span className="block truncate text-xs text-slate-500">{helper}</span>
+        <span className="block truncate text-[10px] uppercase tracking-[0.15em] text-slate-500">{label}</span>
+        <span className="mt-0.5 block truncate text-base font-semibold text-slate-50">{value}</span>
       </span>
     </div>
   );
