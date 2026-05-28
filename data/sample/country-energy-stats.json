@@ -1,0 +1,370 @@
+[
+  {
+    "countryCode": "US",
+    "country": "United States",
+    "region": "North America",
+    "installedCapacityMW": 1290000,
+    "annualGenerationTWh": 4320,
+    "demandPeakGW": 745,
+    "averageLoadGW": 493,
+    "averagePriceUsdMWh": 54,
+    "gridCarbonIntensityGCO2KWh": 360,
+    "electrificationRate": 100,
+    "renewableShare": 24,
+    "generationMix": [
+      { "fuelType": "gas", "capacityMW": 545000, "share": 42.2 },
+      { "fuelType": "wind", "capacityMW": 151000, "share": 11.7 },
+      { "fuelType": "solar", "capacityMW": 153000, "share": 11.9 },
+      { "fuelType": "coal", "capacityMW": 175000, "share": 13.6 },
+      { "fuelType": "nuclear", "capacityMW": 95000, "share": 7.4 },
+      { "fuelType": "hydro", "capacityMW": 80000, "share": 6.2 },
+      { "fuelType": "battery", "capacityMW": 41000, "share": 3.2 },
+      { "fuelType": "biomass", "capacityMW": 50000, "share": 3.8 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "CA",
+    "country": "Canada",
+    "region": "North America",
+    "installedCapacityMW": 160000,
+    "annualGenerationTWh": 650,
+    "demandPeakGW": 74,
+    "averageLoadGW": 65,
+    "averagePriceUsdMWh": 39,
+    "gridCarbonIntensityGCO2KWh": 120,
+    "electrificationRate": 100,
+    "renewableShare": 67,
+    "generationMix": [
+      { "fuelType": "hydro", "capacityMW": 82000, "share": 51.3 },
+      { "fuelType": "nuclear", "capacityMW": 14000, "share": 8.8 },
+      { "fuelType": "gas", "capacityMW": 23000, "share": 14.4 },
+      { "fuelType": "wind", "capacityMW": 17000, "share": 10.6 },
+      { "fuelType": "solar", "capacityMW": 7000, "share": 4.4 },
+      { "fuelType": "biomass", "capacityMW": 8000, "share": 5 },
+      { "fuelType": "coal", "capacityMW": 9000, "share": 5.5 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "BR",
+    "country": "Brazil",
+    "region": "Latin America",
+    "installedCapacityMW": 211000,
+    "annualGenerationTWh": 680,
+    "demandPeakGW": 102,
+    "averageLoadGW": 78,
+    "averagePriceUsdMWh": 42,
+    "gridCarbonIntensityGCO2KWh": 150,
+    "electrificationRate": 99.8,
+    "renewableShare": 83,
+    "generationMix": [
+      { "fuelType": "hydro", "capacityMW": 109000, "share": 51.7 },
+      { "fuelType": "wind", "capacityMW": 29000, "share": 13.7 },
+      { "fuelType": "solar", "capacityMW": 37000, "share": 17.5 },
+      { "fuelType": "gas", "capacityMW": 17000, "share": 8.1 },
+      { "fuelType": "biomass", "capacityMW": 16000, "share": 7.6 },
+      { "fuelType": "coal", "capacityMW": 3000, "share": 1.4 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "GB",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "installedCapacityMW": 95000,
+    "annualGenerationTWh": 285,
+    "demandPeakGW": 48,
+    "averageLoadGW": 33,
+    "averagePriceUsdMWh": 115,
+    "gridCarbonIntensityGCO2KWh": 180,
+    "electrificationRate": 100,
+    "renewableShare": 48,
+    "generationMix": [
+      { "fuelType": "wind", "capacityMW": 31000, "share": 32.6 },
+      { "fuelType": "gas", "capacityMW": 28000, "share": 29.5 },
+      { "fuelType": "solar", "capacityMW": 16000, "share": 16.8 },
+      { "fuelType": "nuclear", "capacityMW": 6000, "share": 6.3 },
+      { "fuelType": "battery", "capacityMW": 6500, "share": 6.8 },
+      { "fuelType": "hydro", "capacityMW": 4500, "share": 4.7 },
+      { "fuelType": "biomass", "capacityMW": 3000, "share": 3.3 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "DE",
+    "country": "Germany",
+    "region": "Europe",
+    "installedCapacityMW": 250000,
+    "annualGenerationTWh": 515,
+    "demandPeakGW": 82,
+    "averageLoadGW": 59,
+    "averagePriceUsdMWh": 91,
+    "gridCarbonIntensityGCO2KWh": 390,
+    "electrificationRate": 100,
+    "renewableShare": 58,
+    "generationMix": [
+      { "fuelType": "solar", "capacityMW": 89000, "share": 35.6 },
+      { "fuelType": "wind", "capacityMW": 71000, "share": 28.4 },
+      { "fuelType": "gas", "capacityMW": 36000, "share": 14.4 },
+      { "fuelType": "coal", "capacityMW": 34000, "share": 13.6 },
+      { "fuelType": "biomass", "capacityMW": 9000, "share": 3.6 },
+      { "fuelType": "hydro", "capacityMW": 8000, "share": 3.2 },
+      { "fuelType": "battery", "capacityMW": 3000, "share": 1.2 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "FR",
+    "country": "France",
+    "region": "Europe",
+    "installedCapacityMW": 145000,
+    "annualGenerationTWh": 525,
+    "demandPeakGW": 88,
+    "averageLoadGW": 60,
+    "averagePriceUsdMWh": 82,
+    "gridCarbonIntensityGCO2KWh": 80,
+    "electrificationRate": 100,
+    "renewableShare": 28,
+    "generationMix": [
+      { "fuelType": "nuclear", "capacityMW": 61000, "share": 42.1 },
+      { "fuelType": "hydro", "capacityMW": 26000, "share": 17.9 },
+      { "fuelType": "wind", "capacityMW": 24000, "share": 16.6 },
+      { "fuelType": "solar", "capacityMW": 23000, "share": 15.9 },
+      { "fuelType": "gas", "capacityMW": 9000, "share": 6.2 },
+      { "fuelType": "biomass", "capacityMW": 2000, "share": 1.3 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "IN",
+    "country": "India",
+    "region": "South Asia",
+    "installedCapacityMW": 485000,
+    "annualGenerationTWh": 1820,
+    "demandPeakGW": 250,
+    "averageLoadGW": 208,
+    "averagePriceUsdMWh": 53,
+    "gridCarbonIntensityGCO2KWh": 690,
+    "electrificationRate": 99.6,
+    "renewableShare": 33,
+    "generationMix": [
+      { "fuelType": "coal", "capacityMW": 235000, "share": 48.5 },
+      { "fuelType": "solar", "capacityMW": 91000, "share": 18.8 },
+      { "fuelType": "wind", "capacityMW": 47000, "share": 9.7 },
+      { "fuelType": "hydro", "capacityMW": 52000, "share": 10.7 },
+      { "fuelType": "gas", "capacityMW": 25000, "share": 5.2 },
+      { "fuelType": "nuclear", "capacityMW": 8000, "share": 1.6 },
+      { "fuelType": "biomass", "capacityMW": 27000, "share": 5.5 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "CN",
+    "country": "China",
+    "region": "East Asia",
+    "installedCapacityMW": 3000000,
+    "annualGenerationTWh": 9600,
+    "demandPeakGW": 1420,
+    "averageLoadGW": 1095,
+    "averagePriceUsdMWh": 62,
+    "gridCarbonIntensityGCO2KWh": 560,
+    "electrificationRate": 100,
+    "renewableShare": 38,
+    "generationMix": [
+      { "fuelType": "coal", "capacityMW": 1160000, "share": 38.7 },
+      { "fuelType": "solar", "capacityMW": 720000, "share": 24 },
+      { "fuelType": "wind", "capacityMW": 470000, "share": 15.7 },
+      { "fuelType": "hydro", "capacityMW": 420000, "share": 14 },
+      { "fuelType": "gas", "capacityMW": 140000, "share": 4.6 },
+      { "fuelType": "nuclear", "capacityMW": 62000, "share": 2.1 },
+      { "fuelType": "battery", "capacityMW": 28000, "share": 0.9 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "JP",
+    "country": "Japan",
+    "region": "East Asia",
+    "installedCapacityMW": 310000,
+    "annualGenerationTWh": 980,
+    "demandPeakGW": 155,
+    "averageLoadGW": 112,
+    "averagePriceUsdMWh": 86,
+    "gridCarbonIntensityGCO2KWh": 470,
+    "electrificationRate": 100,
+    "renewableShare": 26,
+    "generationMix": [
+      { "fuelType": "gas", "capacityMW": 105000, "share": 33.9 },
+      { "fuelType": "solar", "capacityMW": 84000, "share": 27.1 },
+      { "fuelType": "coal", "capacityMW": 52000, "share": 16.8 },
+      { "fuelType": "hydro", "capacityMW": 50000, "share": 16.1 },
+      { "fuelType": "nuclear", "capacityMW": 15000, "share": 4.8 },
+      { "fuelType": "wind", "capacityMW": 4000, "share": 1.3 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "AU",
+    "country": "Australia",
+    "region": "Oceania",
+    "installedCapacityMW": 98000,
+    "annualGenerationTWh": 275,
+    "demandPeakGW": 35,
+    "averageLoadGW": 28,
+    "averagePriceUsdMWh": 74,
+    "gridCarbonIntensityGCO2KWh": 520,
+    "electrificationRate": 100,
+    "renewableShare": 39,
+    "generationMix": [
+      { "fuelType": "coal", "capacityMW": 26000, "share": 26.5 },
+      { "fuelType": "solar", "capacityMW": 34000, "share": 34.7 },
+      { "fuelType": "wind", "capacityMW": 12000, "share": 12.2 },
+      { "fuelType": "gas", "capacityMW": 17000, "share": 17.3 },
+      { "fuelType": "hydro", "capacityMW": 8500, "share": 8.7 },
+      { "fuelType": "battery", "capacityMW": 500, "share": 0.6 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "ZA",
+    "country": "South Africa",
+    "region": "Sub-Saharan Africa",
+    "installedCapacityMW": 63000,
+    "annualGenerationTWh": 225,
+    "demandPeakGW": 34,
+    "averageLoadGW": 25,
+    "averagePriceUsdMWh": 65,
+    "gridCarbonIntensityGCO2KWh": 760,
+    "electrificationRate": 89,
+    "renewableShare": 12,
+    "generationMix": [
+      { "fuelType": "coal", "capacityMW": 41000, "share": 65.1 },
+      { "fuelType": "wind", "capacityMW": 4200, "share": 6.7 },
+      { "fuelType": "solar", "capacityMW": 6600, "share": 10.5 },
+      { "fuelType": "nuclear", "capacityMW": 1900, "share": 3 },
+      { "fuelType": "hydro", "capacityMW": 3500, "share": 5.6 },
+      { "fuelType": "gas", "capacityMW": 5800, "share": 9.1 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "NG",
+    "country": "Nigeria",
+    "region": "West Africa",
+    "installedCapacityMW": 14000,
+    "annualGenerationTWh": 36,
+    "demandPeakGW": 7,
+    "averageLoadGW": 4.6,
+    "averagePriceUsdMWh": 48,
+    "gridCarbonIntensityGCO2KWh": 410,
+    "electrificationRate": 60,
+    "renewableShare": 20,
+    "generationMix": [
+      { "fuelType": "gas", "capacityMW": 9900, "share": 70.7 },
+      { "fuelType": "hydro", "capacityMW": 2800, "share": 20 },
+      { "fuelType": "solar", "capacityMW": 900, "share": 6.4 },
+      { "fuelType": "oil", "capacityMW": 400, "share": 2.9 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "countryCode": "SA",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "installedCapacityMW": 95000,
+    "annualGenerationTWh": 420,
+    "demandPeakGW": 70,
+    "averageLoadGW": 48,
+    "averagePriceUsdMWh": 39,
+    "gridCarbonIntensityGCO2KWh": 620,
+    "electrificationRate": 100,
+    "renewableShare": 4,
+    "generationMix": [
+      { "fuelType": "gas", "capacityMW": 64000, "share": 67.4 },
+      { "fuelType": "oil", "capacityMW": 21000, "share": 22.1 },
+      { "fuelType": "solar", "capacityMW": 7000, "share": 7.4 },
+      { "fuelType": "wind", "capacityMW": 1500, "share": 1.6 },
+      { "fuelType": "battery", "capacityMW": 1500, "share": 1.5 }
+    ],
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01",
+    "source": {
+      "name": "Demo country energy metrics",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  }
+]

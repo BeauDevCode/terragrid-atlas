@@ -1,0 +1,562 @@
+[
+  {
+    "id": "plant-us-grand-coulee",
+    "name": "Grand Coulee Dam",
+    "countryCode": "US",
+    "country": "United States",
+    "city": "Coulee Dam",
+    "latitude": 47.956,
+    "longitude": -118.981,
+    "fuelType": "hydro",
+    "capacityMW": 6809,
+    "operator": "U.S. Bureau of Reclamation",
+    "status": "operating",
+    "commissioningYear": 1942,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Large hydroelectric station used as a recognizable U.S. grid anchor in the demo dataset."
+  },
+  {
+    "id": "plant-us-palo-verde",
+    "name": "Palo Verde Nuclear Generating Station",
+    "countryCode": "US",
+    "country": "United States",
+    "city": "Wintersburg",
+    "latitude": 33.389,
+    "longitude": -112.866,
+    "fuelType": "nuclear",
+    "capacityMW": 3937,
+    "operator": "Arizona Public Service",
+    "status": "operating",
+    "commissioningYear": 1986,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Representative nuclear baseload plant in the Western Interconnection."
+  },
+  {
+    "id": "plant-us-moss-landing",
+    "name": "Moss Landing Energy Storage / Gas Hub",
+    "countryCode": "US",
+    "country": "United States",
+    "city": "Moss Landing",
+    "latitude": 36.803,
+    "longitude": -121.788,
+    "fuelType": "battery",
+    "capacityMW": 750,
+    "operator": "Vistra / PG&E region",
+    "status": "operating",
+    "commissioningYear": 2021,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Included to show battery storage and grid-flexibility assets."
+  },
+  {
+    "id": "plant-ca-robert-bourassa",
+    "name": "Robert-Bourassa Generating Station",
+    "countryCode": "CA",
+    "country": "Canada",
+    "city": "James Bay",
+    "latitude": 53.79,
+    "longitude": -77.52,
+    "fuelType": "hydro",
+    "capacityMW": 5616,
+    "operator": "Hydro-Quebec",
+    "status": "operating",
+    "commissioningYear": 1981,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Major hydro resource connected to eastern Canadian and export corridors."
+  },
+  {
+    "id": "plant-ca-bruce",
+    "name": "Bruce Nuclear Generating Station",
+    "countryCode": "CA",
+    "country": "Canada",
+    "city": "Tiverton",
+    "latitude": 44.326,
+    "longitude": -81.599,
+    "fuelType": "nuclear",
+    "capacityMW": 6232,
+    "operator": "Bruce Power",
+    "status": "operating",
+    "commissioningYear": 1977,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Large nuclear facility included for capacity comparison."
+  },
+  {
+    "id": "plant-br-itaipu",
+    "name": "Itaipu Hydroelectric Plant",
+    "countryCode": "BR",
+    "country": "Brazil",
+    "city": "Foz do Iguacu",
+    "latitude": -25.408,
+    "longitude": -54.588,
+    "fuelType": "hydro",
+    "capacityMW": 14000,
+    "operator": "Itaipu Binacional",
+    "status": "operating",
+    "commissioningYear": 1984,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Cross-border hydro facility represented as part of Brazil's generation mix."
+  },
+  {
+    "id": "plant-br-belo-monte",
+    "name": "Belo Monte Hydroelectric Complex",
+    "countryCode": "BR",
+    "country": "Brazil",
+    "city": "Altamira",
+    "latitude": -3.126,
+    "longitude": -51.776,
+    "fuelType": "hydro",
+    "capacityMW": 11233,
+    "operator": "Norte Energia",
+    "status": "operating",
+    "commissioningYear": 2016,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Amazon-region generation asset in the sample atlas."
+  },
+  {
+    "id": "plant-gb-hornsea",
+    "name": "Hornsea Offshore Wind Zone",
+    "countryCode": "GB",
+    "country": "United Kingdom",
+    "city": "North Sea",
+    "latitude": 53.885,
+    "longitude": 1.79,
+    "fuelType": "wind",
+    "capacityMW": 2500,
+    "operator": "Orsted / partners",
+    "status": "operating",
+    "commissioningYear": 2019,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Offshore wind cluster used to demonstrate renewable infrastructure mapping."
+  },
+  {
+    "id": "plant-gb-sizewell-b",
+    "name": "Sizewell B",
+    "countryCode": "GB",
+    "country": "United Kingdom",
+    "city": "Suffolk",
+    "latitude": 52.214,
+    "longitude": 1.619,
+    "fuelType": "nuclear",
+    "capacityMW": 1198,
+    "operator": "EDF Energy",
+    "status": "operating",
+    "commissioningYear": 1995,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Baseload generation marker for the GB dashboard."
+  },
+  {
+    "id": "plant-de-neurath",
+    "name": "Neurath Power Station",
+    "countryCode": "DE",
+    "country": "Germany",
+    "city": "Grevenbroich",
+    "latitude": 51.035,
+    "longitude": 6.618,
+    "fuelType": "coal",
+    "capacityMW": 4211,
+    "operator": "RWE",
+    "status": "operating",
+    "commissioningYear": 1972,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Conventional generation asset included for transition analysis."
+  },
+  {
+    "id": "plant-de-alpha-ventus",
+    "name": "Alpha Ventus Offshore Wind Farm",
+    "countryCode": "DE",
+    "country": "Germany",
+    "city": "North Sea",
+    "latitude": 54.017,
+    "longitude": 6.583,
+    "fuelType": "wind",
+    "capacityMW": 60,
+    "operator": "DOTI",
+    "status": "operating",
+    "commissioningYear": 2010,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Early offshore wind project for renewable layer examples."
+  },
+  {
+    "id": "plant-fr-gravelines",
+    "name": "Gravelines Nuclear Power Station",
+    "countryCode": "FR",
+    "country": "France",
+    "city": "Gravelines",
+    "latitude": 51.015,
+    "longitude": 2.136,
+    "fuelType": "nuclear",
+    "capacityMW": 5460,
+    "operator": "EDF",
+    "status": "operating",
+    "commissioningYear": 1980,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Major nuclear cluster represented in the France dashboard."
+  },
+  {
+    "id": "plant-fr-grand-maison",
+    "name": "Grand'Maison Pumped Storage",
+    "countryCode": "FR",
+    "country": "France",
+    "city": "Isere",
+    "latitude": 45.14,
+    "longitude": 6.05,
+    "fuelType": "hydro",
+    "capacityMW": 1800,
+    "operator": "EDF",
+    "status": "operating",
+    "commissioningYear": 1988,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Flexible hydro storage example."
+  },
+  {
+    "id": "plant-in-mundra",
+    "name": "Mundra Thermal Power Station",
+    "countryCode": "IN",
+    "country": "India",
+    "city": "Mundra",
+    "latitude": 22.823,
+    "longitude": 69.553,
+    "fuelType": "coal",
+    "capacityMW": 4620,
+    "operator": "Adani Power",
+    "status": "operating",
+    "commissioningYear": 2009,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Large coastal thermal station for India's demand growth context."
+  },
+  {
+    "id": "plant-in-bhadla",
+    "name": "Bhadla Solar Park",
+    "countryCode": "IN",
+    "country": "India",
+    "city": "Bhadla",
+    "latitude": 27.54,
+    "longitude": 71.915,
+    "fuelType": "solar",
+    "capacityMW": 2245,
+    "operator": "Multiple IPPs",
+    "status": "operating",
+    "commissioningYear": 2020,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Utility solar park included in renewable mapping."
+  },
+  {
+    "id": "plant-cn-three-gorges",
+    "name": "Three Gorges Dam",
+    "countryCode": "CN",
+    "country": "China",
+    "city": "Yichang",
+    "latitude": 30.823,
+    "longitude": 111.003,
+    "fuelType": "hydro",
+    "capacityMW": 22500,
+    "operator": "China Three Gorges Corporation",
+    "status": "operating",
+    "commissioningYear": 2003,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Large hydro benchmark for global scale comparison."
+  },
+  {
+    "id": "plant-cn-tengger",
+    "name": "Tengger Desert Solar Base",
+    "countryCode": "CN",
+    "country": "China",
+    "city": "Zhongwei",
+    "latitude": 37.45,
+    "longitude": 105.03,
+    "fuelType": "solar",
+    "capacityMW": 1547,
+    "operator": "State Grid / regional developers",
+    "status": "operating",
+    "commissioningYear": 2016,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Solar base used in geospatial renewable density views."
+  },
+  {
+    "id": "plant-cn-taishan",
+    "name": "Taishan Nuclear Power Plant",
+    "countryCode": "CN",
+    "country": "China",
+    "city": "Taishan",
+    "latitude": 21.918,
+    "longitude": 112.981,
+    "fuelType": "nuclear",
+    "capacityMW": 3500,
+    "operator": "CGN / EDF partners",
+    "status": "operating",
+    "commissioningYear": 2018,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Nuclear generation marker in southern China."
+  },
+  {
+    "id": "plant-jp-kashiwazaki",
+    "name": "Kashiwazaki-Kariwa Nuclear Power Plant",
+    "countryCode": "JP",
+    "country": "Japan",
+    "city": "Niigata",
+    "latitude": 37.429,
+    "longitude": 138.596,
+    "fuelType": "nuclear",
+    "capacityMW": 7965,
+    "operator": "TEPCO",
+    "status": "planned",
+    "commissioningYear": 1985,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Marked planned in this demo to represent restart uncertainty and status filtering."
+  },
+  {
+    "id": "plant-jp-kawasaki",
+    "name": "Kawasaki Thermal Power Station",
+    "countryCode": "JP",
+    "country": "Japan",
+    "city": "Kawasaki",
+    "latitude": 35.507,
+    "longitude": 139.752,
+    "fuelType": "gas",
+    "capacityMW": 3420,
+    "operator": "JERA",
+    "status": "operating",
+    "commissioningYear": 1961,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Thermal generation asset near a major load center."
+  },
+  {
+    "id": "plant-au-eraring",
+    "name": "Eraring Power Station",
+    "countryCode": "AU",
+    "country": "Australia",
+    "city": "Lake Macquarie",
+    "latitude": -33.061,
+    "longitude": 151.535,
+    "fuelType": "coal",
+    "capacityMW": 2880,
+    "operator": "Origin Energy",
+    "status": "operating",
+    "commissioningYear": 1982,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "NEM coal unit represented in transition analysis."
+  },
+  {
+    "id": "plant-au-hornsdale",
+    "name": "Hornsdale Power Reserve",
+    "countryCode": "AU",
+    "country": "Australia",
+    "city": "Jamestown",
+    "latitude": -33.074,
+    "longitude": 138.606,
+    "fuelType": "battery",
+    "capacityMW": 150,
+    "operator": "Neoen",
+    "status": "operating",
+    "commissioningYear": 2017,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Battery and system-services facility for the grid intelligence layer."
+  },
+  {
+    "id": "plant-za-kusile",
+    "name": "Kusile Power Station",
+    "countryCode": "ZA",
+    "country": "South Africa",
+    "city": "Emalahleni",
+    "latitude": -25.918,
+    "longitude": 28.917,
+    "fuelType": "coal",
+    "capacityMW": 4800,
+    "operator": "Eskom",
+    "status": "under-construction",
+    "commissioningYear": 2017,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Status demonstrates construction and reliability filters."
+  },
+  {
+    "id": "plant-za-koeberg",
+    "name": "Koeberg Nuclear Power Station",
+    "countryCode": "ZA",
+    "country": "South Africa",
+    "city": "Cape Town",
+    "latitude": -33.676,
+    "longitude": 18.431,
+    "fuelType": "nuclear",
+    "capacityMW": 1860,
+    "operator": "Eskom",
+    "status": "operating",
+    "commissioningYear": 1984,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Nuclear station in southern Africa."
+  },
+  {
+    "id": "plant-ng-egbin",
+    "name": "Egbin Thermal Power Station",
+    "countryCode": "NG",
+    "country": "Nigeria",
+    "city": "Lagos",
+    "latitude": 6.584,
+    "longitude": 3.62,
+    "fuelType": "gas",
+    "capacityMW": 1320,
+    "operator": "Egbin Power",
+    "status": "operating",
+    "commissioningYear": 1985,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Major gas-fired plant near the Lagos load center."
+  },
+  {
+    "id": "plant-ng-zungeru",
+    "name": "Zungeru Hydroelectric Power Station",
+    "countryCode": "NG",
+    "country": "Nigeria",
+    "city": "Niger State",
+    "latitude": 9.816,
+    "longitude": 6.155,
+    "fuelType": "hydro",
+    "capacityMW": 700,
+    "operator": "Federal Ministry of Power",
+    "status": "operating",
+    "commissioningYear": 2024,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Hydro plant for West Africa generation diversity."
+  },
+  {
+    "id": "plant-sa-riyadh-pp11",
+    "name": "Riyadh PP11",
+    "countryCode": "SA",
+    "country": "Saudi Arabia",
+    "city": "Riyadh",
+    "latitude": 24.632,
+    "longitude": 46.91,
+    "fuelType": "gas",
+    "capacityMW": 1729,
+    "operator": "Saudi Electricity Company",
+    "status": "operating",
+    "commissioningYear": 2013,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Large gas combined-cycle facility near Riyadh."
+  },
+  {
+    "id": "plant-sa-sakaka",
+    "name": "Sakaka Solar PV Plant",
+    "countryCode": "SA",
+    "country": "Saudi Arabia",
+    "city": "Al Jouf",
+    "latitude": 29.969,
+    "longitude": 40.206,
+    "fuelType": "solar",
+    "capacityMW": 300,
+    "operator": "ACWA Power",
+    "status": "operating",
+    "commissioningYear": 2021,
+    "source": {
+      "name": "Sample adapted from public infrastructure references",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Solar marker for Gulf renewable expansion."
+  }
+]

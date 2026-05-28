@@ -1,0 +1,291 @@
+[
+  {
+    "id": "sub-us-palo-verde-500",
+    "name": "Palo Verde 500 kV Switchyard",
+    "countryCode": "US",
+    "country": "United States",
+    "latitude": 33.37,
+    "longitude": -112.84,
+    "voltageKV": 500,
+    "operator": "Arizona Public Service",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "High-voltage node for the Western Interconnection demo layer."
+  },
+  {
+    "id": "sub-us-northern-virginia",
+    "name": "Northern Virginia Load Pocket",
+    "countryCode": "US",
+    "country": "United States",
+    "latitude": 39.035,
+    "longitude": -77.45,
+    "voltageKV": 500,
+    "operator": "Dominion Energy",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Substation cluster approximating a major data center load region."
+  },
+  {
+    "id": "sub-ca-radisson",
+    "name": "Radisson Converter / Substation",
+    "countryCode": "CA",
+    "country": "Canada",
+    "latitude": 53.795,
+    "longitude": -77.633,
+    "voltageKV": 735,
+    "operator": "Hydro-Quebec",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Quebec 735 kV transmission hub represented for hydro export corridors."
+  },
+  {
+    "id": "sub-br-foz",
+    "name": "Foz do Iguacu Substation",
+    "countryCode": "BR",
+    "country": "Brazil",
+    "latitude": -25.52,
+    "longitude": -54.57,
+    "voltageKV": 765,
+    "operator": "Eletrobras / ONS",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Transmission node linked to Itaipu hydropower evacuation."
+  },
+  {
+    "id": "sub-gb-sellindge",
+    "name": "Sellindge HVDC Converter Station",
+    "countryCode": "GB",
+    "country": "United Kingdom",
+    "latitude": 51.103,
+    "longitude": 1.025,
+    "voltageKV": 400,
+    "operator": "National Grid",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Interconnector substation used for cross-border exchange views."
+  },
+  {
+    "id": "sub-de-wilster",
+    "name": "Wilster Substation",
+    "countryCode": "DE",
+    "country": "Germany",
+    "latitude": 53.92,
+    "longitude": 9.38,
+    "voltageKV": 380,
+    "operator": "TenneT",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Northern grid node near offshore wind landing corridors."
+  },
+  {
+    "id": "sub-de-meitingen",
+    "name": "Meitingen Substation",
+    "countryCode": "DE",
+    "country": "Germany",
+    "latitude": 48.55,
+    "longitude": 10.85,
+    "voltageKV": 380,
+    "operator": "Amprion / TransnetBW",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Southern transfer corridor marker."
+  },
+  {
+    "id": "sub-fr-mandarin",
+    "name": "Mandarins 400 kV Substation",
+    "countryCode": "FR",
+    "country": "France",
+    "latitude": 48.27,
+    "longitude": 2.68,
+    "voltageKV": 400,
+    "operator": "RTE",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Representative 400 kV node within the RTE network."
+  },
+  {
+    "id": "sub-in-bhadla",
+    "name": "Bhadla Pooling Station",
+    "countryCode": "IN",
+    "country": "India",
+    "latitude": 27.59,
+    "longitude": 71.94,
+    "voltageKV": 765,
+    "operator": "Power Grid Corporation of India",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Renewable energy pooling node in Rajasthan."
+  },
+  {
+    "id": "sub-in-vindhyachal",
+    "name": "Vindhyachal 765 kV Substation",
+    "countryCode": "IN",
+    "country": "India",
+    "latitude": 24.095,
+    "longitude": 82.672,
+    "voltageKV": 765,
+    "operator": "Power Grid Corporation of India",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "High-voltage interregional power transfer marker."
+  },
+  {
+    "id": "sub-cn-shanghai-hub",
+    "name": "Shanghai UHV Receiving Hub",
+    "countryCode": "CN",
+    "country": "China",
+    "latitude": 31.23,
+    "longitude": 121.47,
+    "voltageKV": 1000,
+    "operator": "State Grid Corporation of China",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Urban receiving node representing long-distance UHV transfer."
+  },
+  {
+    "id": "sub-cn-guangdong",
+    "name": "Guangdong Load Center Substation",
+    "countryCode": "CN",
+    "country": "China",
+    "latitude": 23.13,
+    "longitude": 113.27,
+    "voltageKV": 500,
+    "operator": "China Southern Power Grid",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Southern China load center marker."
+  },
+  {
+    "id": "sub-jp-shin-shinano",
+    "name": "Shin-Shinano Frequency Converter",
+    "countryCode": "JP",
+    "country": "Japan",
+    "latitude": 36.22,
+    "longitude": 138.04,
+    "voltageKV": 275,
+    "operator": "TEPCO / Chubu Electric",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Frequency converter represented as a grid interconnection node."
+  },
+  {
+    "id": "sub-au-davenport",
+    "name": "Davenport Substation",
+    "countryCode": "AU",
+    "country": "Australia",
+    "latitude": -32.51,
+    "longitude": 137.78,
+    "voltageKV": 275,
+    "operator": "ElectraNet",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "South Australian transmission node linked to renewable zones."
+  },
+  {
+    "id": "sub-za-jupiter",
+    "name": "Jupiter Substation",
+    "countryCode": "ZA",
+    "country": "South Africa",
+    "latitude": -26.22,
+    "longitude": 28.21,
+    "voltageKV": 400,
+    "operator": "Eskom",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Gauteng load center grid node."
+  },
+  {
+    "id": "sub-ng-shiroro",
+    "name": "Shiroro 330 kV Substation",
+    "countryCode": "NG",
+    "country": "Nigeria",
+    "latitude": 9.972,
+    "longitude": 6.842,
+    "voltageKV": 330,
+    "operator": "Transmission Company of Nigeria",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Northern transmission node represented in the Nigeria dashboard."
+  },
+  {
+    "id": "sub-sa-riyadh",
+    "name": "Riyadh 380 kV Substation",
+    "countryCode": "SA",
+    "country": "Saudi Arabia",
+    "latitude": 24.75,
+    "longitude": 46.82,
+    "voltageKV": 380,
+    "operator": "National Grid SA",
+    "status": "operating",
+    "source": {
+      "name": "Sample infrastructure node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Central load center node for the Saudi grid."
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "id": "metric-us-load",
+    "countryCode": "US",
+    "metric": "load",
+    "label": "United States aggregate load",
+    "unit": "GW",
+    "value": 493,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 438 },
+      { "timestamp": "04:00", "value": 414 },
+      { "timestamp": "08:00", "value": 471 },
+      { "timestamp": "12:00", "value": 493 },
+      { "timestamp": "16:00", "value": 528 },
+      { "timestamp": "20:00", "value": 561 }
+    ]
+  },
+  {
+    "id": "metric-ca-load",
+    "countryCode": "CA",
+    "metric": "load",
+    "label": "Canada aggregate load",
+    "unit": "GW",
+    "value": 65,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 58 },
+      { "timestamp": "04:00", "value": 55 },
+      { "timestamp": "08:00", "value": 62 },
+      { "timestamp": "12:00", "value": 65 },
+      { "timestamp": "16:00", "value": 69 },
+      { "timestamp": "20:00", "value": 72 }
+    ]
+  },
+  {
+    "id": "metric-br-load",
+    "countryCode": "BR",
+    "metric": "load",
+    "label": "Brazil aggregate load",
+    "unit": "GW",
+    "value": 78,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 66 },
+      { "timestamp": "04:00", "value": 61 },
+      { "timestamp": "08:00", "value": 72 },
+      { "timestamp": "12:00", "value": 78 },
+      { "timestamp": "16:00", "value": 82 },
+      { "timestamp": "20:00", "value": 88 }
+    ]
+  },
+  {
+    "id": "metric-gb-load",
+    "countryCode": "GB",
+    "metric": "load",
+    "label": "Great Britain load",
+    "unit": "GW",
+    "value": 33,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 27 },
+      { "timestamp": "04:00", "value": 24 },
+      { "timestamp": "08:00", "value": 31 },
+      { "timestamp": "12:00", "value": 33 },
+      { "timestamp": "16:00", "value": 36 },
+      { "timestamp": "20:00", "value": 39 }
+    ]
+  },
+  {
+    "id": "metric-de-load",
+    "countryCode": "DE",
+    "metric": "load",
+    "label": "Germany load",
+    "unit": "GW",
+    "value": 59,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 51 },
+      { "timestamp": "04:00", "value": 47 },
+      { "timestamp": "08:00", "value": 57 },
+      { "timestamp": "12:00", "value": 59 },
+      { "timestamp": "16:00", "value": 64 },
+      { "timestamp": "20:00", "value": 67 }
+    ]
+  },
+  {
+    "id": "metric-fr-load",
+    "countryCode": "FR",
+    "metric": "load",
+    "label": "France load",
+    "unit": "GW",
+    "value": 60,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 52 },
+      { "timestamp": "04:00", "value": 49 },
+      { "timestamp": "08:00", "value": 58 },
+      { "timestamp": "12:00", "value": 60 },
+      { "timestamp": "16:00", "value": 63 },
+      { "timestamp": "20:00", "value": 68 }
+    ]
+  },
+  {
+    "id": "metric-in-load",
+    "countryCode": "IN",
+    "metric": "load",
+    "label": "India load",
+    "unit": "GW",
+    "value": 208,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 178 },
+      { "timestamp": "04:00", "value": 162 },
+      { "timestamp": "08:00", "value": 198 },
+      { "timestamp": "12:00", "value": 208 },
+      { "timestamp": "16:00", "value": 229 },
+      { "timestamp": "20:00", "value": 242 }
+    ]
+  },
+  {
+    "id": "metric-cn-load",
+    "countryCode": "CN",
+    "metric": "load",
+    "label": "China load",
+    "unit": "GW",
+    "value": 1095,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 945 },
+      { "timestamp": "04:00", "value": 890 },
+      { "timestamp": "08:00", "value": 1035 },
+      { "timestamp": "12:00", "value": 1095 },
+      { "timestamp": "16:00", "value": 1180 },
+      { "timestamp": "20:00", "value": 1235 }
+    ]
+  },
+  {
+    "id": "metric-jp-load",
+    "countryCode": "JP",
+    "metric": "load",
+    "label": "Japan load",
+    "unit": "GW",
+    "value": 112,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 96 },
+      { "timestamp": "04:00", "value": 88 },
+      { "timestamp": "08:00", "value": 109 },
+      { "timestamp": "12:00", "value": 112 },
+      { "timestamp": "16:00", "value": 119 },
+      { "timestamp": "20:00", "value": 127 }
+    ]
+  },
+  {
+    "id": "metric-au-load",
+    "countryCode": "AU",
+    "metric": "load",
+    "label": "Australia NEM load",
+    "unit": "GW",
+    "value": 28,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 23 },
+      { "timestamp": "04:00", "value": 21 },
+      { "timestamp": "08:00", "value": 26 },
+      { "timestamp": "12:00", "value": 28 },
+      { "timestamp": "16:00", "value": 31 },
+      { "timestamp": "20:00", "value": 34 }
+    ]
+  },
+  {
+    "id": "metric-za-load",
+    "countryCode": "ZA",
+    "metric": "load",
+    "label": "South Africa load",
+    "unit": "GW",
+    "value": 25,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 21 },
+      { "timestamp": "04:00", "value": 19 },
+      { "timestamp": "08:00", "value": 24 },
+      { "timestamp": "12:00", "value": 25 },
+      { "timestamp": "16:00", "value": 28 },
+      { "timestamp": "20:00", "value": 31 }
+    ]
+  },
+  {
+    "id": "metric-ng-load",
+    "countryCode": "NG",
+    "metric": "load",
+    "label": "Nigeria grid load",
+    "unit": "GW",
+    "value": 4.6,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 3.8 },
+      { "timestamp": "04:00", "value": 3.3 },
+      { "timestamp": "08:00", "value": 4.1 },
+      { "timestamp": "12:00", "value": 4.6 },
+      { "timestamp": "16:00", "value": 5.1 },
+      { "timestamp": "20:00", "value": 5.4 }
+    ]
+  },
+  {
+    "id": "metric-sa-load",
+    "countryCode": "SA",
+    "metric": "load",
+    "label": "Saudi Arabia load",
+    "unit": "GW",
+    "value": 48,
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "history": [
+      { "timestamp": "00:00", "value": 39 },
+      { "timestamp": "04:00", "value": 35 },
+      { "timestamp": "08:00", "value": 44 },
+      { "timestamp": "12:00", "value": 48 },
+      { "timestamp": "16:00", "value": 58 },
+      { "timestamp": "20:00", "value": 62 }
+    ]
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "id": "region-us-western",
+    "name": "Western Interconnection",
+    "countryCode": "US",
+    "country": "United States",
+    "operator": "WECC balancing authorities",
+    "peakLoadGW": 165,
+    "generationCapacityGW": 310,
+    "interconnectionCount": 8,
+    "status": "synchronized",
+    "bbox": [-125, 31, -102, 49],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Simplified regional footprint for the atlas map."
+  },
+  {
+    "id": "region-us-eastern",
+    "name": "Eastern Interconnection",
+    "countryCode": "US",
+    "country": "United States",
+    "operator": "NERC regional entities",
+    "peakLoadGW": 620,
+    "generationCapacityGW": 840,
+    "interconnectionCount": 18,
+    "status": "synchronized",
+    "bbox": [-102, 25, -66, 49],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Large synchronized area represented with an approximate bounding box."
+  },
+  {
+    "id": "region-ca-quebec",
+    "name": "Quebec Interconnection",
+    "countryCode": "CA",
+    "country": "Canada",
+    "operator": "Hydro-Quebec TransEnergie",
+    "peakLoadGW": 42,
+    "generationCapacityGW": 48,
+    "interconnectionCount": 7,
+    "status": "partially-synchronized",
+    "bbox": [-80, 44, -57, 62],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Hydro-dominant regional system with HVDC interfaces."
+  },
+  {
+    "id": "region-br-sin",
+    "name": "Brazil National Interconnected System",
+    "countryCode": "BR",
+    "country": "Brazil",
+    "operator": "ONS",
+    "peakLoadGW": 102,
+    "generationCapacityGW": 211,
+    "interconnectionCount": 6,
+    "status": "synchronized",
+    "bbox": [-74, -34, -35, 5],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "National interconnected system approximated for dashboard filtering."
+  },
+  {
+    "id": "region-eu-continental",
+    "name": "Continental Europe Synchronous Area",
+    "countryCode": "DE",
+    "country": "Germany",
+    "operator": "ENTSO-E member TSOs",
+    "peakLoadGW": 390,
+    "generationCapacityGW": 780,
+    "interconnectionCount": 40,
+    "status": "synchronized",
+    "bbox": [-5, 41, 18, 56],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "European region shown through Germany-centered atlas records."
+  },
+  {
+    "id": "region-gb",
+    "name": "Great Britain Synchronous System",
+    "countryCode": "GB",
+    "country": "United Kingdom",
+    "operator": "National Grid ESO",
+    "peakLoadGW": 48,
+    "generationCapacityGW": 95,
+    "interconnectionCount": 9,
+    "status": "islanded",
+    "bbox": [-8, 49.5, 2.5, 59],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Islanded synchronous grid connected by HVDC interconnectors."
+  },
+  {
+    "id": "region-india-national",
+    "name": "India National Grid",
+    "countryCode": "IN",
+    "country": "India",
+    "operator": "Grid-India",
+    "peakLoadGW": 250,
+    "generationCapacityGW": 485,
+    "interconnectionCount": 5,
+    "status": "synchronized",
+    "bbox": [68, 7, 89, 36],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "National synchronous system with regional load dispatch zones."
+  },
+  {
+    "id": "region-cn-state-grid",
+    "name": "State Grid Operating Area",
+    "countryCode": "CN",
+    "country": "China",
+    "operator": "State Grid Corporation of China",
+    "peakLoadGW": 1100,
+    "generationCapacityGW": 2500,
+    "interconnectionCount": 30,
+    "status": "synchronized",
+    "bbox": [82, 20, 126, 48],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Large national operating region represented for UHV corridor analysis."
+  },
+  {
+    "id": "region-jp-east-west",
+    "name": "Japan 50/60 Hz Interface",
+    "countryCode": "JP",
+    "country": "Japan",
+    "operator": "OCCTO / regional utilities",
+    "peakLoadGW": 155,
+    "generationCapacityGW": 310,
+    "interconnectionCount": 4,
+    "status": "partially-synchronized",
+    "bbox": [129, 31, 146, 45],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Frequency regions summarized as a single analytical region."
+  },
+  {
+    "id": "region-au-nem",
+    "name": "National Electricity Market",
+    "countryCode": "AU",
+    "country": "Australia",
+    "operator": "AEMO",
+    "peakLoadGW": 35,
+    "generationCapacityGW": 75,
+    "interconnectionCount": 7,
+    "status": "synchronized",
+    "bbox": [136, -39, 154, -23],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "East-coast market footprint, approximated for map interaction."
+  },
+  {
+    "id": "region-za-eskom",
+    "name": "Eskom Transmission System",
+    "countryCode": "ZA",
+    "country": "South Africa",
+    "operator": "Eskom",
+    "peakLoadGW": 34,
+    "generationCapacityGW": 63,
+    "interconnectionCount": 6,
+    "status": "synchronized",
+    "bbox": [16, -35, 33, -22],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "National transmission system represented for reliability and alert context."
+  },
+  {
+    "id": "region-ng-national",
+    "name": "Nigeria National Grid",
+    "countryCode": "NG",
+    "country": "Nigeria",
+    "operator": "Transmission Company of Nigeria",
+    "peakLoadGW": 7,
+    "generationCapacityGW": 14,
+    "interconnectionCount": 3,
+    "status": "synchronized",
+    "bbox": [3, 4, 14, 14],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "National grid footprint for West Africa demo records."
+  },
+  {
+    "id": "region-sa-national",
+    "name": "Saudi National Grid",
+    "countryCode": "SA",
+    "country": "Saudi Arabia",
+    "operator": "National Grid SA",
+    "peakLoadGW": 70,
+    "generationCapacityGW": 95,
+    "interconnectionCount": 5,
+    "status": "synchronized",
+    "bbox": [35, 16, 56, 32],
+    "source": {
+      "name": "Sample grid region metadata",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "National system with regional interconnection and renewables expansion."
+  }
+]

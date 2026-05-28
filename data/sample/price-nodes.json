@@ -1,0 +1,254 @@
+[
+  {
+    "id": "price-us-pjm-west",
+    "name": "PJM West Hub",
+    "countryCode": "US",
+    "country": "United States",
+    "latitude": 40.42,
+    "longitude": -79.99,
+    "market": "PJM",
+    "pricePerMWh": 42.8,
+    "currency": "USD",
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample price node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-us-caiso-sp15",
+    "name": "CAISO SP15",
+    "countryCode": "US",
+    "country": "United States",
+    "latitude": 34.05,
+    "longitude": -118.24,
+    "market": "CAISO",
+    "pricePerMWh": 58.4,
+    "currency": "USD",
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample price node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-ca-ontario",
+    "name": "Ontario HOEP",
+    "countryCode": "CA",
+    "country": "Canada",
+    "latitude": 43.65,
+    "longitude": -79.38,
+    "market": "IESO",
+    "pricePerMWh": 35.6,
+    "currency": "CAD",
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample price node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-br-southeast",
+    "name": "Brazil Southeast PLD",
+    "countryCode": "BR",
+    "country": "Brazil",
+    "latitude": -23.55,
+    "longitude": -46.63,
+    "market": "CCEE / ONS",
+    "pricePerMWh": 31.2,
+    "currency": "USD",
+    "dataMode": "estimated",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample converted market signal",
+      "freshness": "estimated",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-gb-day-ahead",
+    "name": "GB Day-Ahead Reference",
+    "countryCode": "GB",
+    "country": "United Kingdom",
+    "latitude": 51.5,
+    "longitude": -0.12,
+    "market": "GB power market",
+    "pricePerMWh": 92.5,
+    "currency": "GBP",
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample price node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-de-epex",
+    "name": "Germany-Luxembourg Day-Ahead",
+    "countryCode": "DE",
+    "country": "Germany",
+    "latitude": 50.11,
+    "longitude": 8.68,
+    "market": "EPEX",
+    "pricePerMWh": 76.4,
+    "currency": "EUR",
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample price node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-fr-epex",
+    "name": "France Day-Ahead",
+    "countryCode": "FR",
+    "country": "France",
+    "latitude": 48.85,
+    "longitude": 2.35,
+    "market": "EPEX",
+    "pricePerMWh": 68.1,
+    "currency": "EUR",
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample price node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-in-iex",
+    "name": "India IEX Reference",
+    "countryCode": "IN",
+    "country": "India",
+    "latitude": 28.61,
+    "longitude": 77.21,
+    "market": "IEX",
+    "pricePerMWh": 52.7,
+    "currency": "USD",
+    "dataMode": "estimated",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample converted market signal",
+      "freshness": "estimated",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-cn-guangdong",
+    "name": "Guangdong Spot Reference",
+    "countryCode": "CN",
+    "country": "China",
+    "latitude": 23.13,
+    "longitude": 113.27,
+    "market": "Provincial spot pilot",
+    "pricePerMWh": 61.3,
+    "currency": "USD",
+    "dataMode": "estimated",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample converted market signal",
+      "freshness": "estimated",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-jp-jepx",
+    "name": "JEPX Tokyo Reference",
+    "countryCode": "JP",
+    "country": "Japan",
+    "latitude": 35.67,
+    "longitude": 139.65,
+    "market": "JEPX",
+    "pricePerMWh": 84.7,
+    "currency": "USD",
+    "dataMode": "estimated",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample converted market signal",
+      "freshness": "estimated",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-au-nsw",
+    "name": "NEM New South Wales",
+    "countryCode": "AU",
+    "country": "Australia",
+    "latitude": -33.87,
+    "longitude": 151.21,
+    "market": "NEM",
+    "pricePerMWh": 71.8,
+    "currency": "AUD",
+    "dataMode": "sample",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample price node",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-za-eskom",
+    "name": "South Africa System Reference",
+    "countryCode": "ZA",
+    "country": "South Africa",
+    "latitude": -26.2,
+    "longitude": 28.04,
+    "market": "Regulated / bilateral reference",
+    "pricePerMWh": 64.9,
+    "currency": "USD",
+    "dataMode": "estimated",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample converted market signal",
+      "freshness": "estimated",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-ng-system",
+    "name": "Nigeria System Reference",
+    "countryCode": "NG",
+    "country": "Nigeria",
+    "latitude": 6.52,
+    "longitude": 3.38,
+    "market": "Estimated wholesale reference",
+    "pricePerMWh": 47.6,
+    "currency": "USD",
+    "dataMode": "estimated",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample converted market signal",
+      "freshness": "estimated",
+      "updatedAt": "2026-05-01"
+    }
+  },
+  {
+    "id": "price-sa-system",
+    "name": "Saudi System Reference",
+    "countryCode": "SA",
+    "country": "Saudi Arabia",
+    "latitude": 24.71,
+    "longitude": 46.67,
+    "market": "Regulated / bilateral reference",
+    "pricePerMWh": 39.4,
+    "currency": "USD",
+    "dataMode": "estimated",
+    "updatedAt": "2026-05-01T15:00:00Z",
+    "source": {
+      "name": "Sample converted market signal",
+      "freshness": "estimated",
+      "updatedAt": "2026-05-01"
+    }
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "dc-us-ashburn-campus",
+    "name": "Ashburn Cloud Campus",
+    "countryCode": "US",
+    "country": "United States",
+    "city": "Ashburn",
+    "latitude": 39.0438,
+    "longitude": -77.4874,
+    "estimatedLoadMW": 260,
+    "operator": "Multiple hyperscale operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Representative hyperscale concentration in Northern Virginia."
+  },
+  {
+    "id": "dc-us-dalles",
+    "name": "Columbia River Compute Cluster",
+    "countryCode": "US",
+    "country": "United States",
+    "city": "The Dalles",
+    "latitude": 45.5946,
+    "longitude": -121.1787,
+    "estimatedLoadMW": 120,
+    "operator": "Hyperscale operator",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Hydro-adjacent compute load marker."
+  },
+  {
+    "id": "dc-ca-montreal",
+    "name": "Montreal Low-Carbon Compute Zone",
+    "countryCode": "CA",
+    "country": "Canada",
+    "city": "Montreal",
+    "latitude": 45.5019,
+    "longitude": -73.5674,
+    "estimatedLoadMW": 85,
+    "operator": "Colocation / cloud providers",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Data center demand near Quebec's low-carbon grid."
+  },
+  {
+    "id": "dc-br-sao-paulo",
+    "name": "Sao Paulo Metro Data Hub",
+    "countryCode": "BR",
+    "country": "Brazil",
+    "city": "Sao Paulo",
+    "latitude": -23.5558,
+    "longitude": -46.6396,
+    "estimatedLoadMW": 95,
+    "operator": "Regional cloud and colocation operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Major Latin American compute market marker."
+  },
+  {
+    "id": "dc-gb-london-west",
+    "name": "London West Data Corridor",
+    "countryCode": "GB",
+    "country": "United Kingdom",
+    "city": "Slough",
+    "latitude": 51.5105,
+    "longitude": -0.595,
+    "estimatedLoadMW": 140,
+    "operator": "Colocation and hyperscale operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "London-area data center cluster."
+  },
+  {
+    "id": "dc-de-frankfurt",
+    "name": "Frankfurt Internet Exchange Compute Zone",
+    "countryCode": "DE",
+    "country": "Germany",
+    "city": "Frankfurt",
+    "latitude": 50.1109,
+    "longitude": 8.6821,
+    "estimatedLoadMW": 210,
+    "operator": "Colocation and cloud providers",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Dense European data center and internet exchange market."
+  },
+  {
+    "id": "dc-fr-paris",
+    "name": "Paris North Compute Zone",
+    "countryCode": "FR",
+    "country": "France",
+    "city": "Paris",
+    "latitude": 48.923,
+    "longitude": 2.3522,
+    "estimatedLoadMW": 125,
+    "operator": "Cloud and colocation operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Compute demand layer for a low-carbon nuclear-heavy power system."
+  },
+  {
+    "id": "dc-in-mumbai",
+    "name": "Mumbai Cloud Landing Zone",
+    "countryCode": "IN",
+    "country": "India",
+    "city": "Mumbai",
+    "latitude": 19.076,
+    "longitude": 72.8777,
+    "estimatedLoadMW": 155,
+    "operator": "Cloud and telecom operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Major Indian compute and cable landing market."
+  },
+  {
+    "id": "dc-in-hyderabad",
+    "name": "Hyderabad Compute Campus",
+    "countryCode": "IN",
+    "country": "India",
+    "city": "Hyderabad",
+    "latitude": 17.385,
+    "longitude": 78.4867,
+    "estimatedLoadMW": 110,
+    "operator": "Hyperscale operator",
+    "status": "under-construction",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Growth marker for planned compute load."
+  },
+  {
+    "id": "dc-cn-beijing",
+    "name": "Beijing-Tianjin Compute Cluster",
+    "countryCode": "CN",
+    "country": "China",
+    "city": "Beijing",
+    "latitude": 39.9042,
+    "longitude": 116.4074,
+    "estimatedLoadMW": 240,
+    "operator": "Cloud and telecom operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Northern China compute demand marker."
+  },
+  {
+    "id": "dc-cn-shanghai",
+    "name": "Shanghai Cloud Exchange Zone",
+    "countryCode": "CN",
+    "country": "China",
+    "city": "Shanghai",
+    "latitude": 31.2304,
+    "longitude": 121.4737,
+    "estimatedLoadMW": 260,
+    "operator": "Cloud and colocation operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Eastern China load center data hub."
+  },
+  {
+    "id": "dc-jp-tokyo",
+    "name": "Tokyo East Compute Zone",
+    "countryCode": "JP",
+    "country": "Japan",
+    "city": "Tokyo",
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "estimatedLoadMW": 185,
+    "operator": "Cloud and colocation operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "High-reliability compute market in a dense load region."
+  },
+  {
+    "id": "dc-au-sydney",
+    "name": "Sydney Metro Compute Ring",
+    "countryCode": "AU",
+    "country": "Australia",
+    "city": "Sydney",
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "estimatedLoadMW": 150,
+    "operator": "Cloud and colocation operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "NEM-connected compute load marker."
+  },
+  {
+    "id": "dc-za-johannesburg",
+    "name": "Johannesburg Data Hub",
+    "countryCode": "ZA",
+    "country": "South Africa",
+    "city": "Johannesburg",
+    "latitude": -26.2041,
+    "longitude": 28.0473,
+    "estimatedLoadMW": 70,
+    "operator": "Cloud and regional colocation operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Southern African compute demand marker."
+  },
+  {
+    "id": "dc-ng-lagos",
+    "name": "Lagos Digital Infrastructure Zone",
+    "countryCode": "NG",
+    "country": "Nigeria",
+    "city": "Lagos",
+    "latitude": 6.5244,
+    "longitude": 3.3792,
+    "estimatedLoadMW": 48,
+    "operator": "Carrier-neutral and cloud operators",
+    "status": "operating",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "West African digital infrastructure marker."
+  },
+  {
+    "id": "dc-sa-riyadh",
+    "name": "Riyadh Cloud Region",
+    "countryCode": "SA",
+    "country": "Saudi Arabia",
+    "city": "Riyadh",
+    "latitude": 24.7136,
+    "longitude": 46.6753,
+    "estimatedLoadMW": 130,
+    "operator": "Cloud and telecom operators",
+    "status": "under-construction",
+    "source": {
+      "name": "Sample public-market data center layer",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Planned cloud demand marker for the Gulf region."
+  }
+]

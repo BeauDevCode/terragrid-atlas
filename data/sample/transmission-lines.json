@@ -1,0 +1,302 @@
+[
+  {
+    "id": "line-us-west-path15",
+    "name": "California Path 15 Corridor",
+    "countryCode": "US",
+    "country": "United States",
+    "from": "Gates",
+    "to": "Los Banos",
+    "voltageKV": 500,
+    "lengthKm": 135,
+    "operator": "CAISO / PG&E",
+    "status": "operating",
+    "corridorType": "domestic",
+    "coordinates": [[-120.1, 36.3], [-121.0, 37.1]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Simplified high-voltage transfer corridor for California."
+  },
+  {
+    "id": "line-us-ca-or-intertie",
+    "name": "Pacific AC Intertie",
+    "countryCode": "US",
+    "country": "United States",
+    "from": "Celilo",
+    "to": "Sylmar",
+    "voltageKV": 500,
+    "lengthKm": 1360,
+    "operator": "Bonneville Power Administration / LADWP",
+    "status": "operating",
+    "corridorType": "interconnection",
+    "coordinates": [[-121.15, 45.65], [-121.3, 40.5], [-118.45, 34.3]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "North-south intertie marker for western power transfer."
+  },
+  {
+    "id": "line-ca-quebec-new-england",
+    "name": "Quebec-New England HVDC Link",
+    "countryCode": "CA",
+    "country": "Canada",
+    "from": "Radisson",
+    "to": "Sandy Pond",
+    "voltageKV": 450,
+    "lengthKm": 1480,
+    "operator": "Hydro-Quebec / ISO-NE interface",
+    "status": "operating",
+    "corridorType": "interconnection",
+    "coordinates": [[-77.63, 53.8], [-73.5, 45.5], [-71.5, 42.5]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Cross-border import/export corridor represented for regional analysis."
+  },
+  {
+    "id": "line-br-itaipu-sao-paulo",
+    "name": "Itaipu to Southeast 765 kV Corridor",
+    "countryCode": "BR",
+    "country": "Brazil",
+    "from": "Foz do Iguacu",
+    "to": "Sao Paulo",
+    "voltageKV": 765,
+    "lengthKm": 900,
+    "operator": "Eletrobras / ONS",
+    "status": "operating",
+    "corridorType": "domestic",
+    "coordinates": [[-54.57, -25.5], [-49.2, -23.0], [-46.6, -23.55]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Bulk transfer corridor from hydro resources to southeast load."
+  },
+  {
+    "id": "line-gb-fr-ifa",
+    "name": "IFA Interconnector",
+    "countryCode": "GB",
+    "country": "United Kingdom",
+    "from": "Sellindge",
+    "to": "Les Mandarins",
+    "voltageKV": 270,
+    "lengthKm": 73,
+    "operator": "National Grid / RTE",
+    "status": "operating",
+    "corridorType": "interconnection",
+    "coordinates": [[1.02, 51.1], [1.85, 50.95], [1.8, 50.7]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Simplified GB-France HVDC interconnector."
+  },
+  {
+    "id": "line-de-suedlink",
+    "name": "SuedLink North-South HVDC Corridor",
+    "countryCode": "DE",
+    "country": "Germany",
+    "from": "Wilster",
+    "to": "Bavaria/Baden-Wuerttemberg",
+    "voltageKV": 525,
+    "lengthKm": 700,
+    "operator": "TenneT / TransnetBW",
+    "status": "under-construction",
+    "corridorType": "domestic",
+    "coordinates": [[9.38, 53.92], [9.9, 51.4], [10.85, 48.55]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Energy-transition transmission expansion corridor."
+  },
+  {
+    "id": "line-fr-spain-interconnector",
+    "name": "France-Spain Pyrenees Interconnection",
+    "countryCode": "FR",
+    "country": "France",
+    "from": "Baixas",
+    "to": "Santa Llogaia",
+    "voltageKV": 320,
+    "lengthKm": 65,
+    "operator": "RTE / REE",
+    "status": "operating",
+    "corridorType": "interconnection",
+    "coordinates": [[2.8, 42.75], [2.9, 42.55], [2.95, 42.25]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Interconnection corridor in the European power market."
+  },
+  {
+    "id": "line-in-rajasthan-green-corridor",
+    "name": "Rajasthan Green Energy Corridor",
+    "countryCode": "IN",
+    "country": "India",
+    "from": "Bhadla",
+    "to": "Vindhyachal",
+    "voltageKV": 765,
+    "lengthKm": 740,
+    "operator": "Power Grid Corporation of India",
+    "status": "operating",
+    "corridorType": "domestic",
+    "coordinates": [[71.94, 27.59], [76.8, 25.4], [82.67, 24.1]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Renewable transfer corridor from western solar resources."
+  },
+  {
+    "id": "line-cn-xiangjiaba-shanghai",
+    "name": "Xiangjiaba-Shanghai UHVDC",
+    "countryCode": "CN",
+    "country": "China",
+    "from": "Xiangjiaba",
+    "to": "Shanghai",
+    "voltageKV": 800,
+    "lengthKm": 1980,
+    "operator": "State Grid Corporation of China",
+    "status": "operating",
+    "corridorType": "domestic",
+    "coordinates": [[104.4, 28.6], [112.5, 30.5], [121.47, 31.23]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Long-distance UHVDC transfer represented for China's atlas view."
+  },
+  {
+    "id": "line-cn-west-east",
+    "name": "West-East Renewable Transfer Corridor",
+    "countryCode": "CN",
+    "country": "China",
+    "from": "Inner Mongolia / Ningxia",
+    "to": "Jiangsu",
+    "voltageKV": 800,
+    "lengthKm": 1600,
+    "operator": "State Grid Corporation of China",
+    "status": "operating",
+    "corridorType": "domestic",
+    "coordinates": [[105.03, 37.45], [113.0, 35.0], [119.3, 32.6]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Illustrative transfer corridor for remote renewable bases."
+  },
+  {
+    "id": "line-jp-frequency-link",
+    "name": "East-West Frequency Conversion Interface",
+    "countryCode": "JP",
+    "country": "Japan",
+    "from": "Shin-Shinano",
+    "to": "Sakuma/Higashi-Shimizu",
+    "voltageKV": 275,
+    "lengthKm": 180,
+    "operator": "OCCTO / regional utilities",
+    "status": "operating",
+    "corridorType": "interconnection",
+    "coordinates": [[138.04, 36.22], [138.35, 35.4], [138.5, 35.1]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Represents constrained 50/60 Hz transfer interfaces."
+  },
+  {
+    "id": "line-au-qni",
+    "name": "Queensland-New South Wales Interconnector",
+    "countryCode": "AU",
+    "country": "Australia",
+    "from": "Tarong",
+    "to": "Liddell",
+    "voltageKV": 330,
+    "lengthKm": 590,
+    "operator": "AEMO / Transgrid / Powerlink",
+    "status": "operating",
+    "corridorType": "interconnection",
+    "coordinates": [[151.9, -26.8], [151.2, -29.4], [150.95, -32.37]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "NEM interconnector used for regional price and transfer views."
+  },
+  {
+    "id": "line-za-cape-gauteng",
+    "name": "Cape-Gauteng 400 kV Backbone",
+    "countryCode": "ZA",
+    "country": "South Africa",
+    "from": "Western Cape",
+    "to": "Gauteng",
+    "voltageKV": 400,
+    "lengthKm": 1300,
+    "operator": "Eskom",
+    "status": "operating",
+    "corridorType": "domestic",
+    "coordinates": [[18.43, -33.68], [22.4, -30.8], [28.21, -26.22]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Long-distance backbone corridor from coastal generation to inland load."
+  },
+  {
+    "id": "line-ng-north-south-330",
+    "name": "Nigeria North-South 330 kV Corridor",
+    "countryCode": "NG",
+    "country": "Nigeria",
+    "from": "Shiroro",
+    "to": "Lagos",
+    "voltageKV": 330,
+    "lengthKm": 650,
+    "operator": "Transmission Company of Nigeria",
+    "status": "operating",
+    "corridorType": "domestic",
+    "coordinates": [[6.84, 9.97], [5.1, 8.1], [3.62, 6.58]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Representative national high-voltage transfer route."
+  },
+  {
+    "id": "line-sa-central-west",
+    "name": "Saudi Central-West 380 kV Corridor",
+    "countryCode": "SA",
+    "country": "Saudi Arabia",
+    "from": "Riyadh",
+    "to": "Jeddah",
+    "voltageKV": 380,
+    "lengthKm": 940,
+    "operator": "National Grid SA",
+    "status": "operating",
+    "corridorType": "domestic",
+    "coordinates": [[46.82, 24.75], [42.5, 23.3], [39.2, 21.5]],
+    "source": {
+      "name": "Sample corridor geometry",
+      "freshness": "sample",
+      "updatedAt": "2026-05-01"
+    },
+    "notes": "Transmission link between central and western load centers."
+  }
+]
