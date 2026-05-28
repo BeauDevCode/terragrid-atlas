@@ -67,6 +67,23 @@ a {
   background-color: rgba(8, 20, 32, 0.92) !important;
 }
 
+.terragrid-map-shell .maplibregl-canvas {
+  background: #07131d;
+}
+
+.terragrid-map-shell .maplibregl-ctrl-bottom-left,
+.terragrid-map-shell .maplibregl-ctrl-bottom-right {
+  bottom: 128px;
+}
+
+.terragrid-map-shell .maplibregl-ctrl-attrib,
+.terragrid-map-shell .maplibregl-ctrl-scale {
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  background: rgba(4, 12, 22, 0.86) !important;
+  color: rgba(226, 232, 240, 0.82) !important;
+  backdrop-filter: blur(12px);
+}
+
 .atlas-scrollbar {
   scrollbar-color: rgba(56, 189, 248, 0.45) rgba(15, 23, 42, 0.7);
   scrollbar-width: thin;

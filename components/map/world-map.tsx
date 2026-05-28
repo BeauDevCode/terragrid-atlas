@@ -1,6 +1,11 @@
 "use client";
 
-import maplibregl, { type GeoJSONSource, type LngLatBoundsLike, type MapGeoJSONFeature } from "maplibre-gl";
+import maplibregl, {
+  type GeoJSONSource,
+  type LngLatBoundsLike,
+  type MapGeoJSONFeature,
+  type StyleSpecification
+} from "maplibre-gl";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Maximize2 } from "lucide-react";
 import {
@@ -31,7 +36,124 @@ type SelectedFeature = PointProperties & {
   latitude: number;
 };
 
-const mapStyle = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
+const mapStyle: StyleSpecification = {
+  version: 8,
+  glyphs: "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
+  sources: {
+    "carto-dark": {
+      type: "raster",
+      tiles: [
+        "https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
+        "https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
+        "https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
+        "https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png"
+      ],
+      tileSize: 256,
+      attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+    }
+  },
+  layers: [
+    {
+      id: "carto-dark-basemap",
+      type: "raster",
+      source: "carto-dark",
+      paint: {
+        "raster-opacity": 1,
+        "raster-brightness-min": 0.14,
+        "raster-brightness-max": 1,
+        "raster-contrast": 0.24,
+        "raster-saturation": -0.12
+      }
+    }
+  ]
+};
+
+const continentPolygons: Array<{ name: string; coordinates: [number, number][] }> = [
+  {
+    name: "North America",
+    coordinates: [
+      [-168, 70],
+      [-140, 73],
+      [-112, 70],
+      [-82, 62],
+      [-58, 48],
+      [-70, 24],
+      [-96, 15],
+      [-122, 22],
+      [-138, 42],
+      [-168, 58],
+      [-168, 70]
+    ]
+  },
+  {
+    name: "South America",
+    coordinates: [
+      [-82, 12],
+      [-54, 8],
+      [-36, -18],
+      [-46, -52],
+      [-68, -56],
+      [-80, -28],
+      [-82, 12]
+    ]
+  },
+  {
+    name: "Europe",
+    coordinates: [
+      [-12, 58],
+      [8, 70],
+      [34, 60],
+      [40, 44],
+      [18, 36],
+      [-8, 42],
+      [-12, 58]
+    ]
+  },
+  {
+    name: "Africa",
+    coordinates: [
+      [-18, 34],
+      [32, 34],
+      [52, 12],
+      [42, -34],
+      [16, -36],
+      [-16, -14],
+      [-18, 34]
+    ]
+  },
+  {
+    name: "Asia",
+    coordinates: [
+      [34, 66],
+      [86, 72],
+      [146, 58],
+      [154, 28],
+      [116, 8],
+      [78, 6],
+      [48, 24],
+      [34, 66]
+    ]
+  },
+  {
+    name: "Australia",
+    coordinates: [
+      [112, -12],
+      [154, -18],
+      [150, -42],
+      [116, -44],
+      [112, -12]
+    ]
+  }
+];
+
+const regionLabels: Array<{ label: string; coordinates: [number, number] }> = [
+  { label: "North America", coordinates: [-104, 47] },
+  { label: "South America", coordinates: [-62, -24] },
+  { label: "Europe", coordinates: [16, 54] },
+  { label: "Africa", coordinates: [20, 2] },
+  { label: "Asia", coordinates: [94, 42] },
+  { label: "Australia", coordinates: [134, -27] }
+];
 
 export function WorldMap({
   dataset,
@@ -105,7 +227,7 @@ export function WorldMap({
         source: "atlas-regions",
         paint: {
           "fill-color": "#0ea5e9",
-          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.16, 0.065]
+          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.11, 0.035]
         }
       });
 
@@ -115,7 +237,7 @@ export function WorldMap({
         source: "atlas-regions",
         paint: {
           "line-color": "#38bdf8",
-          "line-opacity": 0.42,
+          "line-opacity": 0.34,
           "line-width": 1.2
         }
       });
@@ -365,8 +487,15 @@ export function WorldMap({
   }, [dataset.countries, dataset.gridRegions, selectedCountryCode]);
 
   return (
-    <div className={compact ? "relative h-80 overflow-hidden rounded-lg bg-slate-950" : "relative h-full min-h-[620px] overflow-hidden rounded-none bg-slate-950"}>
+    <div
+      className={
+        compact
+          ? "relative h-80 overflow-hidden rounded-lg bg-[#07131d]"
+          : "terragrid-map-shell relative h-full min-h-[620px] overflow-hidden rounded-none bg-[#07131d]"
+      }
+    >
       <div ref={containerRef} className="absolute inset-0" />
+      {!compact ? <StaticWorldContextOverlay dataset={dataset} sources={sources} /> : null}
       {!compact ? <StaticAtlasOverlay sources={sources} /> : null}
       {!compact && showAttributionNote ? <div className="pointer-events-none absolute bottom-4 left-4 z-10 max-w-sm rounded-md border border-slate-700/70 bg-slate-950/74 px-3 py-2 text-xs text-slate-400 backdrop-blur">
         Basemap: CARTO dark matter. Infrastructure layers are sample or estimated records.
@@ -713,13 +842,116 @@ function popupHtml(properties: PointProperties) {
   `;
 }
 
+function StaticWorldContextOverlay({
+  dataset,
+  sources
+}: {
+  dataset: AtlasDataset;
+  sources: ReturnType<typeof buildMapSources>;
+}) {
+  return (
+    <svg className="pointer-events-none absolute inset-0 z-[1] h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="atlas-land-gradient" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stopColor="#123348" stopOpacity="0.74" />
+          <stop offset="56%" stopColor="#0d2736" stopOpacity="0.66" />
+          <stop offset="100%" stopColor="#0b1e2c" stopOpacity="0.62" />
+        </linearGradient>
+        <filter id="atlas-land-glow" x="-10%" y="-10%" width="120%" height="120%">
+          <feGaussianBlur stdDeviation="0.18" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      <rect x="0" y="0" width="100" height="100" fill="#07131d" opacity="0.3" />
+      {continentPolygons.map((continent) => (
+        <polygon
+          key={continent.name}
+          points={continent.coordinates.map((coordinate) => projectToViewport(coordinate)).join(" ")}
+          fill="url(#atlas-land-gradient)"
+          filter="url(#atlas-land-glow)"
+          stroke="#5eead4"
+          strokeOpacity="0.22"
+          strokeWidth="0.18"
+          vectorEffect="non-scaling-stroke"
+        />
+      ))}
+
+      {sources.regions.features.map((feature) => {
+        const points = feature.geometry.coordinates[0]?.map((coordinate) => projectToViewport([coordinate[0] ?? 0, coordinate[1] ?? 0])).join(" ");
+        return points ? (
+          <polyline
+            key={String(feature.properties?.id)}
+            points={points}
+            fill="none"
+            stroke="#93c5fd"
+            strokeDasharray="0.6 0.42"
+            strokeOpacity="0.24"
+            strokeWidth="0.12"
+            vectorEffect="non-scaling-stroke"
+          />
+        ) : null;
+      })}
+
+      {regionLabels.map((region) => {
+        const [x, y] = projectToViewport(region.coordinates);
+        return (
+          <text
+            key={region.label}
+            x={x}
+            y={y}
+            fill="#dbeafe"
+            fontSize="1.6"
+            fontWeight="700"
+            letterSpacing="0.11em"
+            opacity="0.42"
+            paintOrder="stroke"
+            stroke="#03101a"
+            strokeWidth="0.42"
+            textAnchor="middle"
+            vectorEffect="non-scaling-stroke"
+          >
+            {region.label.toUpperCase()}
+          </text>
+        );
+      })}
+
+      {dataset.countries.map((country) => {
+        const [x, y] = projectToViewport(country.centroid);
+        return (
+          <text
+            key={country.iso2}
+            x={x}
+            y={y}
+            fill="#dbeafe"
+            fontSize="1.05"
+            fontWeight="600"
+            letterSpacing="0.02em"
+            opacity="0.72"
+            paintOrder="stroke"
+            stroke="#03101a"
+            strokeWidth="0.3"
+            textAnchor="middle"
+            vectorEffect="non-scaling-stroke"
+          >
+            {country.name}
+          </text>
+        );
+      })}
+    </svg>
+  );
+}
+
 function StaticAtlasOverlay({
   sources
 }: {
   sources: ReturnType<typeof buildMapSources>;
 }) {
   return (
-    <svg className="pointer-events-none absolute inset-0 z-[1] h-full w-full opacity-90" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <svg className="pointer-events-none absolute inset-0 z-[2] h-full w-full opacity-90" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
       <defs>
         <filter id="atlas-glow" x="-40%" y="-40%" width="180%" height="180%">
           <feGaussianBlur stdDeviation="0.7" result="blur" />
