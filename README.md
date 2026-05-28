@@ -4,7 +4,9 @@
 
 > Explore the world's power infrastructure.
 
-[Live demo pending final Vercel deployment.]
+GitHub: [BeauDevCode/terragrid-atlas](https://github.com/BeauDevCode/terragrid-atlas)
+
+Live demo: Pending Vercel deployment. The project is ready to deploy, but this local environment does not currently have an authenticated Vercel session.
 
 TerraGrid Atlas is a production-ready Next.js web app for exploring global electricity and energy infrastructure through an interactive map, infrastructure explorer, and country-level analytics dashboards.
 
@@ -175,6 +177,22 @@ npm run build
 npm run build
 npm run start
 ```
+
+## Vercel Deployment
+
+The app is ready for Vercel. To deploy manually:
+
+```bash
+npx vercel@latest login
+npx vercel@latest --prod
+```
+
+Or import the GitHub repository from the Vercel dashboard:
+
+1. Open [https://vercel.com/new](https://vercel.com/new)
+2. Import `BeauDevCode/terragrid-atlas`
+3. Keep the detected Next.js settings
+4. Deploy
 
 ## Future Improvements
 

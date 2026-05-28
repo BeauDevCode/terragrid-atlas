@@ -8,6 +8,10 @@
 
 A global interactive atlas for exploring power plants, substations, transmission, data centers, and grid intelligence.
 
+## Repository URL
+
+https://github.com/BeauDevCode/terragrid-atlas
+
 ## GitHub Topics
 
 `nextjs`, `typescript`, `tailwindcss`, `maplibre`, `energy`, `infrastructure`, `power-grid`, `geospatial`, `recharts`, `open-data`, `data-visualization`, `vercel`
@@ -37,6 +41,15 @@ git remote -v
 git remote add origin https://github.com/YOUR_USERNAME/terragrid-atlas.git
 git push -u origin main
 ```
+
+## Vercel Deployment Commands
+
+```bash
+npx vercel@latest login
+npx vercel@latest --prod
+```
+
+Dashboard alternative: import `BeauDevCode/terragrid-atlas` at https://vercel.com/new and keep the detected Next.js settings.
 
 ## Recommended README Screenshot Order
 

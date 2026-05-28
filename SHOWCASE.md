@@ -4,6 +4,14 @@
 
 TerraGrid Atlas
 
+## GitHub Repository
+
+https://github.com/BeauDevCode/terragrid-atlas
+
+## Live Demo
+
+Pending Vercel deployment. The app is deploy-ready, but the current environment does not have an authenticated Vercel session.
+
 ## Short Description
 
 A global interactive atlas for exploring power plants, substations, transmission, data centers, and grid intelligence.
@@ -25,3 +33,7 @@ Next.js, TypeScript, Tailwind CSS, MapLibre GL JS, Recharts, lucide-react, GitHu
 ## What Makes It Original
 
 TerraGrid Atlas is not a chatbot. It combines geospatial mapping, infrastructure intelligence, and dashboard analytics into one visual research tool for exploring how energy systems are distributed globally.
+
+## First Showcase Image
+
+Upload `screenshots/atlas.png` first because it shows the full TerraGrid Atlas command-center experience.
