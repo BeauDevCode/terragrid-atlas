@@ -1,16 +1,24 @@
 # TerraGrid Atlas
 
-**Global Grid Intelligence**
+**Global grid infrastructure interface**
 
-> Explore the world's power infrastructure.
+> Explore sample electricity infrastructure data through maps, dashboards, and comparison views.
 
 GitHub: [BeauDevCode/terragrid-atlas](https://github.com/BeauDevCode/terragrid-atlas)
 
-Live demo: Pending Vercel deployment. The project is ready to deploy, but this local environment does not currently have an authenticated Vercel session.
+Live demo: Not published yet. Run the local setup below to review the app.
 
-TerraGrid Atlas is a production-ready Next.js web app for exploring global electricity and energy infrastructure through an interactive map, infrastructure explorer, and country-level analytics dashboards.
+TerraGrid Atlas is a Next.js web app for exploring electricity and energy infrastructure through an interactive map, infrastructure explorer, and country-level analytics dashboards.
 
-I built TerraGrid Atlas because energy infrastructure data is often fragmented, paywalled, or difficult to explore. I wanted one place where students, researchers, and citizens could visually understand how power systems are distributed and connected across the world.
+I built TerraGrid Atlas because energy infrastructure data is often fragmented, paywalled, or difficult to explore. The project shows how a practical TypeScript interface can organize sample infrastructure records into maps, filters, dashboards, and transparent methodology notes.
+
+## What This Project Demonstrates
+
+- A typed Next.js App Router interface with atlas, dashboard, explorer, compare, and methodology pages.
+- Map-focused UI state for layers, filters, selected countries, hovered assets, and detail panels.
+- Reusable components for charts, metric cards, empty states, map controls, and data tables.
+- Adapter boundaries around local JSON files so future live data sources can be added without rewriting the UI.
+- Documentation discipline: screenshots, data labels, validation commands, limitations, and a realistic roadmap.
 
 ## Features
 
@@ -36,7 +44,7 @@ I built TerraGrid Atlas because energy infrastructure data is often fragmented, 
 - lucide-react
 - Local JSON sample datasets
 - Adapter-ready data architecture
-- Vercel-ready deployment
+- Vercel deployment path
 
 ## Architecture
 
@@ -58,6 +66,8 @@ components/
 data/sample/             Local JSON datasets
 lib/data/                Types, adapters, constants, aggregations
 ```
+
+UI state lives in the atlas, map, explorer, and compare components. The current app keeps state client-side because the dataset is local and small; the data adapter layer is the boundary for future API, database, or live-feed integrations.
 
 ## Data Model
 
@@ -99,7 +109,7 @@ The adapter roadmap is structured for sources such as:
 - EIA-style fuel mix and generation data where available
 - Public data center and transmission geometry datasets
 
-## Demo Data Explanation
+## Data Notes
 
 This repository ships with realistic sample and estimated records for:
 
@@ -121,7 +131,11 @@ Records are labeled as `sample`, `estimated`, or `live`. The current MVP intenti
 
 The global atlas also includes a clearly labeled sample density layer. Those additional visual density points and corridors are generated presentation/demo signals used to make the atlas readable at global zoom. They are not verified live infrastructure assets.
 
+This scope is intentional: the repo demonstrates interface design, data modeling, and reviewable visualization patterns before adding external providers. It should not be treated as a complete infrastructure database.
+
 ## Screenshots
+
+Static screenshots are available for the main review pages. A GIF walkthrough is not recorded yet.
 
 ### Landing Page
 
@@ -165,14 +179,28 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Verification
+## Validation
 
 ```bash
 npm install
 npm run typecheck
 npm run lint
 npm run build
+npm run dev -- --hostname 127.0.0.1 --port 3000
 ```
+
+Then open [http://localhost:3000](http://localhost:3000) and review:
+
+- `/` - landing page
+- `/atlas` - global infrastructure atlas
+- `/dashboard/US` - example country dashboard
+- `/explorer` - infrastructure record explorer
+- `/compare` - country comparison workspace
+- `/methodology` - data methodology and limitations
+
+Verified from a fresh clone with Node/npm on Windows: dependency install, typecheck, lint, production build, and HTTP 200 smoke checks for the pages above. On Windows systems where PowerShell blocks `npm.ps1`, run the same commands with `npm.cmd`.
+
+`npm run lint` currently passes through `next lint`, but Next.js reports that command as deprecated before Next.js 16. Migrating the script to the ESLint CLI is a small follow-up.
 
 ## Production Build
 
@@ -197,22 +225,22 @@ Or import the GitHub repository from the Vercel dashboard:
 3. Keep the detected Next.js settings
 4. Deploy
 
-## Future Improvements
+## Roadmap
 
-- Add live provider adapters for regional load, price, outage, and generation feeds
-- Add database-backed historical metrics and saved research views
-- Import real OSM/Overpass infrastructure geometries
-- Add country boundary joins and richer choropleth layers
-- Improve facility deduplication and source confidence scoring
-- Add authentication for saved workspaces
-- Add downloadable methodology reports
+- Deploy a public demo and add the live URL to this README.
+- Add live provider adapters for regional load, price, outage, and generation feeds.
+- Add tests for data helpers, filters, and table behavior.
+- Improve small-screen map controls and dashboard layout.
+- Add source-confidence notes and richer methodology exports.
 
 ## Limitations
 
-- The included dataset is representative, not exhaustive
-- Transmission line geometries are simplified
-- Some data center loads and market prices are estimated
-- This app is for research exploration, not operational dispatch or emergency response
+- The included dataset is representative, not exhaustive.
+- Transmission line geometries are simplified.
+- Some data center loads and market prices are estimated.
+- The sample density layer is visual demo data, not verified facility data.
+- There is no authentication, saved workspace persistence, or live provider sync yet.
+- This app is for research exploration, not operational dispatch or emergency response.
 
 ## Suggested Repo Metadata
 
