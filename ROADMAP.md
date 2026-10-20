@@ -4,8 +4,7 @@ TerraGrid Atlas is a portfolio web app with maps, dashboards, filters, and sampl
 
 ## Near term
 
-- Deploy a public demo.
-- Add the live URL to the README.
+- Maintain the [public demo](https://beaudevcode.github.io/terragrid-atlas/) and its deployment workflow.
 - Continue improving small-screen layout across the dashboard and explorer. Atlas controls and metrics are now collapsible on narrow screens.
 - Add clearer notes for sample records.
 - Improve empty states.
