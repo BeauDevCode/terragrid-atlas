@@ -114,6 +114,8 @@ The adapter roadmap is structured for sources such as:
 
 ## Data Notes
 
+The [data sources and limits guide](docs/DATA_SOURCES.md) identifies what is bundled, generated, or supplied by the basemap.
+
 This repository ships with realistic sample and estimated records for:
 
 - United States
