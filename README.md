@@ -6,7 +6,7 @@
 
 GitHub: [BeauDevCode/terragrid-atlas](https://github.com/BeauDevCode/terragrid-atlas)
 
-Live demo: GitHub Pages deployment is being configured; use the local setup below until the URL is verified.
+Live demo: [https://beaudevcode.github.io/terragrid-atlas/](https://beaudevcode.github.io/terragrid-atlas/)
 
 TerraGrid Atlas is a Next.js web app for exploring electricity and energy infrastructure through an interactive map, infrastructure explorer, and country-level analytics dashboards.
 
@@ -219,7 +219,7 @@ The `Deploy Pages` workflow exports the app and publishes the `out/` directory w
 
 ## Roadmap
 
-- Verify the public GitHub Pages URL and add it to this README.
+- Keep the public GitHub Pages demo and CI checks current.
 - Add live provider adapters for regional load, price, outage, and generation feeds.
 - Add tests for data helpers, filters, and table behavior.
 - Improve small-screen map controls and dashboard layout.
