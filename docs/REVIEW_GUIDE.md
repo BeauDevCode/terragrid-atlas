@@ -16,10 +16,13 @@ This guide is for reviewers who want to understand the project quickly.
 ## Validation commands
 
 ```bash
-npm install
+npm ci
 npm run typecheck
 npm run lint
 npm run build
+npm audit --omit=dev --audit-level=high
+GITHUB_PAGES=1 npm run build
+node scripts/check-static-export.mjs
 ```
 
 Local development:

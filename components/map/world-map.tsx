@@ -1,10 +1,10 @@
 "use client";
 
-import maplibregl, {
-  type GeoJSONSource,
-  type LngLatBoundsLike,
-  type MapGeoJSONFeature,
-  type StyleSpecification
+import * as maplibregl from "maplibre-gl";
+import type {
+  GeoJSONSource,
+  LngLatBoundsLike,
+  MapGeoJSONFeature
 } from "maplibre-gl";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Maximize2 } from "lucide-react";
@@ -58,37 +58,7 @@ type SelectedFeature = PointProperties & {
   latitude: number;
 };
 
-const mapStyle: StyleSpecification = {
-  version: 8,
-  glyphs: "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
-  sources: {
-    "carto-dark": {
-      type: "raster",
-      tiles: [
-        "https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-        "https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-        "https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png",
-        "https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png"
-      ],
-      tileSize: 256,
-      attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
-    }
-  },
-  layers: [
-    {
-      id: "carto-dark-basemap",
-      type: "raster",
-      source: "carto-dark",
-      paint: {
-        "raster-opacity": 1,
-        "raster-brightness-min": 0.14,
-        "raster-brightness-max": 1,
-        "raster-contrast": 0.24,
-        "raster-saturation": -0.12
-      }
-    }
-  ]
-};
+const mapStyle = "https://tiles.openfreemap.org/styles/dark";
 
 const continentPolygons: Array<{ name: string; coordinates: [number, number][] }> = [
   {
@@ -266,6 +236,7 @@ export function WorldMap({
       return;
     }
 
+    maplibregl.setWorkerUrl(new URL("maplibre-gl/dist/maplibre-gl-worker.mjs", import.meta.url).toString());
     const map = new maplibregl.Map({
       container: containerRef.current,
       style: mapStyle,
@@ -702,7 +673,7 @@ export function WorldMap({
       {!compact ? <StaticWorldContextOverlay dataset={dataset} sources={sources} /> : null}
       {!compact ? <StaticAtlasOverlay sources={sources} densityMode={densityMode} /> : null}
       {!compact && showAttributionNote ? <div className="pointer-events-none absolute bottom-4 left-4 z-10 max-w-sm rounded-md border border-slate-700/70 bg-slate-950/74 px-3 py-2 text-xs text-slate-400 backdrop-blur">
-        Basemap: CARTO dark matter. Infrastructure layers are sample or estimated records.
+        Basemap: OpenFreeMap dark. Infrastructure layers are sample or estimated records.
       </div> : null}
       {selectedFeature && !compact ? (
         <div className="glass-panel pointer-events-auto absolute bottom-4 right-16 z-10 w-[320px] rounded-lg p-4">
@@ -979,7 +950,7 @@ function buildDemoDensitySources(filters: AtlasFilters, layers: LayerState) {
         type: "Feature",
         geometry: { type: "Point", coordinates: [longitude, latitude] },
         properties: {
-          id: `demo-${hub.code.toLowerCase()}-${index}`,
+          id: `demo-${hub.code.toLowerCase()}-${hubIndex}-${index}`,
           name: `${demoCategoryLabel(category)} sample - ${hub.label}`,
           category,
           countryCode: hub.code,
@@ -1460,5 +1431,5 @@ function projectToViewport([longitude, latitude]: [number, number]) {
   const boundedLat = Math.max(-85, Math.min(85, latitude));
   const radians = (boundedLat * Math.PI) / 180;
   const mercatorY = (1 - Math.log(Math.tan(radians) + 1 / Math.cos(radians)) / Math.PI) / 2;
-  return [x, mercatorY * 100] as const;
+  return [Number(x.toFixed(4)), Number((mercatorY * 100).toFixed(4))] as const;
 }

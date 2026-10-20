@@ -5,7 +5,7 @@ Thanks for taking a look at TerraGrid Atlas.
 ## Local setup
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -19,6 +19,9 @@ Run these before opening a pull request:
 npm run typecheck
 npm run lint
 npm run build
+npm audit --omit=dev --audit-level=high
+GITHUB_PAGES=1 npm run build
+node scripts/check-static-export.mjs
 ```
 
 ## Good first contributions
